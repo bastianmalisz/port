@@ -1,15 +1,4 @@
-/* ugestia pisania stylow i co do css to luźna sugestia ale ja lubię np. mieć kolejność w deklaracją podobną, tzn najpierw fonty, potem kolory, a na końcu pozycje i potem marginy
-np {
-font-size 12
-font-weight
-color
-bg color
-pos rel
-top 20px
-mar
-padd
-transition
-} */
+
 html,body{
     font-size:16px;
     padding:0;
