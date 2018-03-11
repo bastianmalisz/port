@@ -175,13 +175,13 @@ html,body{
     color: rgb(90, 90, 90);
     line-height: 1.988;
     text-align: center;
-    position:relative;
+  
 }
 /* Section Skills 130vh */
 .skills{
-    width:100%;
-    height: 130vh;
     background-color: rgb(241, 248, 255);
+    width:100%;
+    height: 110vh;
 }
 
 .skills--header{
@@ -195,10 +195,10 @@ html,body{
     display:flex;
     flex-direction: row;
     justify-content: space-around;
-    top: 13vh;
+    top:5vh;
     width:100%;
-    height:60px;
-    z-index: 80; 
+    /* height:60px; */
+    
 }
 
 .skillContener{
@@ -207,15 +207,13 @@ html,body{
     justify-content: center;
     flex-wrap: wrap;
     align-content: center;
-    position:relative;
-    top:13vh;
 }
-.skillcont__box{
-    margin: 5px;
-    margin-right: 15px;
-    width:20.5%;
-    height: 35%;
+.skillContener__box{
     border:1px solid black;
+    margin: 5px;
+    margin-right: 25px;
+    width:calc(100% / 4);
+    height: 35%;
 }
 /* Section Projects 120vh */
 .projects{
