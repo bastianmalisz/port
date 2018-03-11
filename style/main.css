@@ -1,5 +1,230 @@
+/* ugestia pisania stylow i co do css to luźna sugestia ale ja lubię np. mieć kolejność w deklaracją podobną, tzn najpierw fonty, potem kolory, a na końcu pozycje i potem marginy
+np {
+font-size 12
+font-weight
+color
+bg color
+pos rel
+top 20px
+mar
+padd
+transition
+} */
 html,body{
     font-size:16px;
     padding:0;
     margin:0;
+}
+
+.container{
+    width:100%;
+    height:100%;
+    position:relative;
+    
+}
+
+/* Welcome screen 100vh */
+.welcome{
+    width:100%;
+    height:100vh;
+}
+
+.welcome--bg {
+    background-image: -moz-linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%);
+    background-image: -webkit-linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%);
+    background-image: -ms-linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%);
+    width: 100%;
+    height: 100%;
+    z-index: 87;
+  }
+
+.welcome--lines{
+    width: 100%;
+    height: 100%;
+    background: url("../images/welcome_background_lines.png");
+    /* background-size: 100% 100%; */
+    background-size: cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    z-index: 88;
+}
+
+.welcome__circle{
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: calc(50% - 62px);
+    top: 20vh;
+    width: 125px;
+    height: 125px;
+    z-index: 99;   
+}
+
+.welcome__circle:after{
+    content:"";
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.059;
+    position: absolute;
+    left: calc(50% - 83px);
+    top: -20px;
+    width: 165px;
+    height: 165px;
+    z-index: 98;     
+}
+
+.welcome__circle:before{
+    content:"";
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.09;
+    position: absolute;
+    left: calc(50% - 72px);
+    top: -10px;
+    width: 144px;
+    height: 144px;
+    z-index: 97;  
+}
+
+.welcome__circle--img{
+    position:relative;
+    left:10%;
+    width:80%;
+    height: auto;
+}
+
+.welcome--menubtn{
+    border: 0px;
+    background: url("../images/menu_icon.png");
+    background-size:contain;
+    background-position: center;
+    position:absolute;
+    top:9vh;
+    right: 15vw;
+    width: 20px;
+    height:15px;
+    cursor: pointer;
+
+}
+.welcome--header{
+    font-size: 40px;
+    font-family: "Lato";
+    font-weight:900;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    position: relative;
+    top: -58%;
+    left: 0%;
+    z-index: 95;     
+}
+
+.welcome--header3{
+    font-size: 16px;
+    font-weight:300;
+    font-family: "Lato";
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    line-height: 2.188;
+    text-align: center;
+    position: relative;
+    left: 0%;
+    top: -60%;
+    height: 50px;
+    z-index: 94;     
+}
+
+.welcome__hirebtn{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 30px;
+    position: absolute;
+    left: calc(50% - 80px);
+    top: 16.5%;
+    width: 160px;
+    height: 45px;
+    z-index: 91;
+    cursor: pointer;
+  }
+
+.welcome__hirebtn--span{
+    font-size: 12px;
+    font-family: "Lato";
+    color: rgb(54, 149, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.875;
+    text-align: center;
+    position: relative;
+    z-index: 92;   
+}
+.welcome--arrow{
+    background: url("../images/arrow_down.png");
+    background-size:contain;
+    background-position:center;
+    background-repeat: no-repeat;
+    position: relative;
+    left: calc(50% - 10px);
+    top: -35vh;
+    width: 15px;
+    height: 30px;
+
+}
+
+/* Section About Me  45vh */
+.am{
+    width:100%;
+    height:45vh;
+}
+
+.am--header{
+    font-size: 42px;
+    font-family: "Lato";
+    font-weight: 300;
+    color: rgb(54, 119, 253);
+    line-height: 0.702;
+    text-align: center;
+    position: relative;
+    top: 7vh;
+    z-index: 84;   
+}
+.am--p{
+    font-size: 15px;
+    font-family: "Lato";
+    color: rgb(90, 90, 90);
+    line-height: 1.988;
+    text-align: center;
+    position:relative;
+    top: 8vh;
+    left: 15%;
+    width: 70%;
+    height: 85px;
+    z-index: 83;
+}
+/* Section Skills 130vh */
+.skills{
+    width:100%;
+    height: 130vh;
+}
+.skills--bg{
+    background-color: rgb(241, 248, 255);
+    width:100%;
+    height:100%;
+    z-index: 41;
+}
+
+/* Section Projects 120vh */
+.projects{
+    width:100%;
+    height:120vh;
+}
+
+/* Section Hire 35vh */
+.hire{
+    width:100%;
+    height:35vh;
 }
