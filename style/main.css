@@ -227,6 +227,36 @@ html,body{
     background-size:60%;
     background-position:center;
 }
+.circleCss{
+    background: url("../images/css.png");
+    background-repeat:no-repeat;
+    background-size:60%;
+    background-position:center;
+}
+.circleHtml{
+    background: url("../images/html.png");
+    background-repeat:no-repeat;
+    background-size:60%;
+    background-position:center;
+}
+.circleCommunicative{
+    background: url("../images/meeting.png");
+    background-repeat:no-repeat;
+    background-size:60%;
+    background-position:center;
+}
+.circleSolving{
+    background: url("../images/research.png");
+    background-repeat:no-repeat;
+    background-size:60%;
+    background-position:center;
+}
+.circleLearning{
+    background: url("../images/bulb.png");
+    background-repeat:no-repeat;
+    background-size:60%;
+    background-position:center;
+}
 .skillContener__box--circle{
     border-style: solid;
     border-width: 1px;
