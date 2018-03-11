@@ -6,35 +6,45 @@ html,body{
 }
 
 .container{
-    width:100%;
+    width: 1200px;
     height:100%;
-    position:relative;
+    margin: 0 auto;
 }
 
+.container-fluid{
+    width: 100%;
+    margin: 0 auto;
+}
+/* Navigation */
+.navi{
+    height:12vh;
+    width:100%;
+    position:fixed;
+}
 /* Welcome screen 100vh */
 .welcome{
-    width:100%;
-    height:100vh;
+    background: url("../images/welcome_background_lines.png");
+    background-size: contain;
+    background-position:center;
+    background-repeat:no-repeat;
+    background: -moz-linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%);
+    background: -webkit-linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%);
+    background: -ms-linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%);
+    height:720px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.welcome--bg {
-    background-image: -moz-linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%);
-    background-image: -webkit-linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%);
-    background-image: -ms-linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%);
-    width: 100%;
-    height: 100%;
-    z-index: 87;
-  }
-
-.welcome--lines{
+/* .welcome--lines{
     width: 100%;
     height: 100%;
     background: url("../images/welcome_background_lines.png");
     background-size: cover;
     background-position:center;
     background-repeat:no-repeat;
-    z-index: 88;
-}
+} */
 
 .welcome__circle{
     border-style: solid;
@@ -46,12 +56,9 @@ html,body{
     background-size:contain;
     background-repeat: no-repeat;
     background-color: rgb(255, 255, 255);
-    position: absolute;
-    left: calc(50% - 62px);
-    top: 20vh;
+    position:relative;
     width: 125px;
-    height: 125px;
-    z-index: 99;   
+    height: 125px;  
 }
 
 .welcome__circle:after{
@@ -63,9 +70,7 @@ html,body{
     left: calc(50% - 83px);
     top: -20px;
     width: 165px;
-    height: 165px;
-    z-index: 98;     
-    
+    height: 165px;  
 }
 
 .welcome__circle:before{
@@ -77,25 +82,17 @@ html,body{
     left: calc(50% - 72px);
     top: -10px;
     width: 144px;
-    height: 144px;
-    z-index: 97;  
+    height: 144px; 
 }
-
-/* .welcome__circle--img{
-    position:relative;
-    left:10%;
-    width:80%;
-    height: auto;
-} */
 
 .welcome--menubtn{
     border: 0px;
     background: url("../images/menu_icon.png");
     background-size:contain;
     background-position: center;
-    position:absolute;
+    position:relative;
     top:9vh;
-    right: 15vw;
+    left: 100%;
     width: 20px;
     height:15px;
     cursor: pointer;
@@ -109,10 +106,7 @@ html,body{
     text-transform: uppercase;
     line-height: 1.2;
     text-align: center;
-    position: relative;
-    top: -58%;
-    left: 0%;
-    z-index: 95;     
+ 
 }
 
 .welcome--header3{
@@ -122,24 +116,15 @@ html,body{
     color: rgba(255, 255, 255, 0.7);
     text-transform: uppercase;
     line-height: 2.188;
-    text-align: center;
-    position: relative;
-    left: 0%;
-    top: -60%;
-    height: 50px;
-    z-index: 94;     
+    text-align: center;     
 }
 
 .welcome__hirebtn{
     background-color: rgb(255, 255, 255);
     border: none;
     border-radius: 30px;
-    position: absolute;
-    left: calc(50% - 80px);
-    top: 16.5%;
     width: 160px;
     height: 45px;
-    z-index: 91;
     cursor: pointer;
   }
 
@@ -151,63 +136,88 @@ html,body{
     text-transform: uppercase;
     line-height: 1.875;
     text-align: center;
-    position: relative;
-    z-index: 92;   
 }
 .welcome--arrow{
     background: url("../images/arrow_down.png");
     background-size:contain;
     background-position:center;
     background-repeat: no-repeat;
-    position: relative;
-    left: calc(50% - 10px);
-    top: -35vh;
     width: 15px;
-    height: 30px;
+    height: 30px; 
+    bottom:20px;
 }
 
 /* Section About Me  45vh */
-.am{
+.aboutMe{
     width:100%;
     height:45vh;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
-
-.am--header{
+.aboutMe > .container{
+    position:relative;
+    top:5vh;
+}
+.aboutMe > .container > h1{
     font-size: 42px;
     font-family: "Lato";
     font-weight: 300;
     color: rgb(54, 119, 253);
     line-height: 0.702;
     text-align: center;
-    position: relative;
-    top: 7vh;
-    z-index: 84;   
 }
-.am--p{
+
+.aboutMe > .container > p{
     font-size: 15px;
     font-family: "Lato";
     color: rgb(90, 90, 90);
     line-height: 1.988;
     text-align: center;
     position:relative;
-    top: 8vh;
-    left: 15%;
-    width: 70%;
-    height: 85px;
-    z-index: 83;
 }
 /* Section Skills 130vh */
 .skills{
     width:100%;
     height: 130vh;
-}
-.skills--bg{
     background-color: rgb(241, 248, 255);
-    width:100%;
-    height:100%;
-    z-index: 41;
 }
 
+.skills--header{
+    font-size: 42px;
+    font-weight:300;
+    font-family: "Lato";
+    color: rgb(54, 119, 253);
+    line-height: 0.702;
+    text-align: center;
+    position:relative;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    top: 13vh;
+    width:100%;
+    height:60px;
+    z-index: 80; 
+}
+
+.skillContener{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    position:relative;
+    top:13vh;
+    padding-left: 
+}
+.skillcont__box{
+    margin: 5px;
+    margin-right: 15px;
+    width:20.5%;
+    height: 35%;
+    border:1px solid black;
+}
 /* Section Projects 120vh */
 .projects{
     width:100%;
@@ -219,3 +229,12 @@ html,body{
     width:100%;
     height:35vh;
 }
+
+
+
+
+
+
+
+
+
