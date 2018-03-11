@@ -4,6 +4,7 @@ html,body{
     padding:0;
     margin:0;
     font-family: "Lato", 'Arial, helvetica, sans-serif';
+    position: relative;
 }
 
 .container{
@@ -16,12 +17,14 @@ html,body{
     width: 100%;
     margin: 0 auto;
 }
+
 /* Navigation */
 .navi{
     height:12vh;
     width:100%;
     position:fixed;
 }
+
 /* Welcome screen 100vh */
 .welcome{
     /* background: url("../images/welcome_background_lines.png"); */
@@ -108,16 +111,17 @@ html,body{
     text-align: center;     
 }
 
-.welcome__hirebtn{
+.btnHire{
     background-color: rgb(255, 255, 255);
     border: none;
-    border-radius: 30px;
-    width: 160px;
-    height: 45px;
+    border-radius: 20px;
+    width: 150px;
+    height: 35px;
     cursor: pointer;
   }
 
-.welcome__hirebtn--span{
+.btnHire__span{
+    font-family: "Lato";
     font-size: 12px;
     color: rgb(54, 149, 255);
     font-weight: bold;
@@ -341,13 +345,46 @@ html,body{
     background-color: rgb(244, 244, 244);
 }
 /* Section Hire 35vh */
-.hire{
-    width:100%;
-    height:35vh;
+.hireMe{
+    background-image:url("../images/paski_bg.png"), -moz-linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%);
+    background-image:url("../images/paski_bg.png"), -webkit-linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%);
+    background-image:url("../images/paski_bg.png"), -ms-linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%); 
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    height:25vh;
 }
-
-
-
+.hireMe__container{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.hireMe > .container > h1{
+    font-size: 30.324px;
+    font-weight:300;
+    line-height: 1.3;
+    color: white;
+}
+.hireMe__container > button{
+    margin-left:30px;
+}
+.hireMe--ready{
+    font-weight:800;
+}
+footer{
+    font-weight:300;
+    font-size:12px;
+    line-height:-20px;
+    color:white;
+    letter-spacing:1.5px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    height:20px;
+    opacity:0.75;   
+}
 
 
 
