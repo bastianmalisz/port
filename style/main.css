@@ -3,6 +3,7 @@ html,body{
     font-size:16px;
     padding:0;
     margin:0;
+    font-family: "Lato", 'Arial, helvetica, sans-serif';
 }
 
 .container{
@@ -209,9 +210,9 @@ html,body{
     align-content: center;
 }
 .skillContener__box{
-    border:1px solid black;
     margin: 5px;
     margin-right: 25px;
+    margin-top:20px;
     display:flex;
     justify-content: center;
     flex-direction: column;
@@ -219,6 +220,7 @@ html,body{
     width:calc(100% / 4);
     height: 35%;
 }
+
 .skillContener__box--circle{
     border-style: solid;
     border-width: 1px;
@@ -227,6 +229,7 @@ html,body{
     width: 104px;
     height: 104px;     
 }
+
 .skillContener__box--header{
     font-size: 24px;
     font-family: "Lato";
@@ -234,6 +237,14 @@ html,body{
     font-weight: bold;
     line-height: 1;
     text-align: center;   
+}
+
+.skillContener__box--paragraph{
+    font-size: 16px;
+    font-family: "Lato";
+    color: rgb(90, 90, 90);
+    line-height: 2.188;
+    text-align: center;      
 }
 /* Section Projects 120vh */
 .projects{
