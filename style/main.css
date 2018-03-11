@@ -41,6 +41,10 @@ html,body{
     border-width: 3px;
     border-color: rgb(255, 255, 255);
     border-radius: 50%;
+    background: url("../images/face.png");
+    background-position-y: 18px;
+    background-size:contain;
+    background-repeat: no-repeat;
     background-color: rgb(255, 255, 255);
     position: absolute;
     left: calc(50% - 62px);
@@ -61,6 +65,7 @@ html,body{
     width: 165px;
     height: 165px;
     z-index: 98;     
+    
 }
 
 .welcome__circle:before{
@@ -76,12 +81,12 @@ html,body{
     z-index: 97;  
 }
 
-.welcome__circle--img{
+/* .welcome__circle--img{
     position:relative;
     left:10%;
     width:80%;
     height: auto;
-}
+} */
 
 .welcome--menubtn{
     border: 0px;
