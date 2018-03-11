@@ -24,28 +24,19 @@ html,body{
 }
 /* Welcome screen 100vh */
 .welcome{
-    background: url("../images/welcome_background_lines.png");
-    background-size: contain;
+    /* background: url("../images/welcome_background_lines.png"); */
+    background-size: cover;
     background-position:center;
     background-repeat:no-repeat;
-    background: -moz-linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%);
-    background: -webkit-linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%);
-    background: -ms-linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%);
+    background-image: url("../images/welcome_background_lines.png"), -moz-linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%);
+    background-image:url("../images/welcome_background_lines.png"), -webkit-linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%);
+    background-image:url("../images/welcome_background_lines.png"), -ms-linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%);
     height:720px;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
-/* .welcome--lines{
-    width: 100%;
-    height: 100%;
-    background: url("../images/welcome_background_lines.png");
-    background-size: cover;
-    background-position:center;
-    background-repeat:no-repeat;
-} */
 
 .welcome__circle{
     border-style: solid;
@@ -87,7 +78,7 @@ html,body{
 }
 
 .welcome--menubtn{
-    border: 0px;
+    border: none;
     background: url("../images/menu_icon.png");
     background-size:contain;
     background-position: center;
@@ -97,23 +88,20 @@ html,body{
     width: 20px;
     height:15px;
     cursor: pointer;
-
 }
+
 .welcome--header{
     font-size: 40px;
-    font-family: "Lato";
     font-weight:900;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     line-height: 1.2;
     text-align: center;
- 
 }
 
 .welcome--header3{
     font-size: 16px;
     font-weight:300;
-    font-family: "Lato";
     color: rgba(255, 255, 255, 0.7);
     text-transform: uppercase;
     line-height: 2.188;
@@ -131,7 +119,6 @@ html,body{
 
 .welcome__hirebtn--span{
     font-size: 12px;
-    font-family: "Lato";
     color: rgb(54, 149, 255);
     font-weight: bold;
     text-transform: uppercase;
@@ -163,7 +150,6 @@ html,body{
 }
 .aboutMe > .container > h1{
     font-size: 42px;
-    font-family: "Lato";
     font-weight: 300;
     color: rgb(54, 119, 253);
     line-height: 0.702;
@@ -172,7 +158,6 @@ html,body{
 
 .aboutMe > .container > p{
     font-size: 15px;
-    font-family: "Lato";
     color: rgb(90, 90, 90);
     line-height: 1.988;
     text-align: center;
@@ -181,25 +166,16 @@ html,body{
 /* Section Skills 120vh */
 .skills{
     background-color: rgb(241, 248, 255);
-    width:100%;
     height: 120vh;
 }
 
-.skills--header{
+.skills__header{
     font-size: 42px;
     font-weight:300;
-    font-family: "Lato";
     color: rgb(54, 119, 253);
     line-height: 0.702;
     text-align: center;
-    position:relative;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-    top:5vh;
-    width:100%;
-    /* height:60px; */
-    
+    width:100%;   
 }
 
 .skillContener{
@@ -268,7 +244,6 @@ html,body{
 
 .skillContener__box--header{
     font-size: 24px;
-    font-family: "Lato";
     color: rgb(54, 119, 253);
     font-weight: bold;
     line-height: 1;
@@ -277,17 +252,94 @@ html,body{
 
 .skillContener__box--paragraph{
     font-size: 16px;
-    font-family: "Lato";
     color: rgb(90, 90, 90);
     line-height: 2.188;
     text-align: center;      
 }
 /* Section Projects 120vh */
 .projects{
-    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height:120vh;
 }
 
+.projectsContainer{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.projects__header{
+    font-size: 42px;
+    font-weight:300;
+    color: rgb(54, 119, 253);
+    line-height: 0.702;
+    text-align: center;
+    width:100%;
+}
+
+.projectsContainer__box{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(244, 244, 244);
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 25px;
+    margin-top:50px;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width:calc(100% / 4);
+    height: 30%;
+    cursor: pointer;
+}
+.projectsContainer__box__weatherApp{
+    background: url("../images/cloud.png");
+    background-repeat:no-repeat;
+    background-size:40%;
+    background-position:center;
+    background-color: rgb(244, 244, 244);
+}
+.projectsContainer__box__calendarApp{
+    background: url("../images/calendar.png");
+    background-repeat:no-repeat;
+    background-size:40%;
+    background-position:center;
+    background-color: rgb(244, 244, 244);
+}
+.projectsContainer__box__textEditor{
+    background: url("../images/text-file-editor.png");
+    background-repeat:no-repeat;
+    background-size:40%;
+    background-position:center;
+    background-color: rgb(244, 244, 244);
+}
+.projectsContainer__box__musicPlayer{
+    background: url("../images/music-player.png");
+    background-repeat:no-repeat;
+    background-size:40%;
+    background-position:center;
+    background-color: rgb(244, 244, 244);
+}
+.projectsContainer__box__fryzjerWeb{
+    background: url("../images/computer-screen.png");
+    background-repeat:no-repeat;
+    background-size:40%;
+    background-position:center;
+    background-color: rgb(244, 244, 244);
+}
+.projectsContainer__box__fundacjaWeb{
+    background: url("../images/computer-screen2.png");
+    background-repeat:no-repeat;
+    background-size:40%;
+    background-position:center;
+    background-color: rgb(244, 244, 244);
+}
 /* Section Hire 35vh */
 .hire{
     width:100%;
