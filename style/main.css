@@ -221,6 +221,12 @@ html,body{
     height: 35%;
 }
 
+.circleJs{
+    background: url("../images/javascript.png");
+    background-repeat:no-repeat;
+    background-size:60%;
+    background-position:center;
+}
 .skillContener__box--circle{
     border-style: solid;
     border-width: 1px;
