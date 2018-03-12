@@ -5,9 +5,19 @@ html,body{
     margin:0;
     font-family: "Lato", 'Arial, helvetica, sans-serif';
     position: relative;
+    scroll-behavior: smooth;
 }
 .lastItem{
     margin-top: auto;
+}
+.backgroundWhite{
+    background-color:white!important;
+}
+.backgroundBlue{
+    background-color: rgb(53,100,252)!important;
+}
+.displayNone{
+    display:none !important;
 }
 
 .container{
@@ -59,7 +69,6 @@ html,body{
     width: 125px;
     height: 125px;  
     
-    
 }
 
 .welcome__circle:after{
@@ -85,8 +94,6 @@ html,body{
     width: 144px;
     height: 144px; 
 }
-
-
 
 .welcome--header{
     font-size: 40px;
@@ -382,9 +389,7 @@ footer{
     opacity:0.75;   
 }
 
-
-
-/* Button */
+/* Button menu*/
 .welcome__menubtn{
     border: none;
     background-color:transparent;
@@ -399,6 +404,7 @@ footer{
     cursor: pointer;
     z-index:2;   
 }
+
 .welcome__menubtn:focus{
     outline:0;
 }
@@ -441,7 +447,111 @@ footer{
     to{ transform: rotate(-45deg) translateY(50%) translateX(15%)}     
 }
 
+/* menuPopup */
+ul,li{
+    list-style-type: none;
+    padding:0;
+}
 
+.menuPopup{
+    background-color:white;
+    border-radius: 10px;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    top:5%;
+    left: 50%;
+    margin-left: -600px;
+    height:auto;
+}
 
+.menuPopup__btnExit{
+    border:none;
+    background-color:transparent;
+    position:relative;
+    left:48%;
+    width:30px;
+    height:30px;
+    margin-top:10px;
+    cursor: pointer;
+}
+.menuPopup__btnExit:focus{
+    outline:none;
+}
+.menuPopup__btnExit__line{
+    background-color:rgb(53,100,252);
+    width:18px;
+    height:2px;
+}
+
+.menuPopup__btnExit__line--line1{
+    transform: rotate(45deg) translateX(1px);
+}
+
+.menuPopup__btnExit__line--line2{
+    transform: rotate(-45deg) translateX(1px);
+}
+
+.menuPopup--link{
+    font-size: 34px;
+    color: rgb(210, 210, 210);
+    line-height: 1.96;
+    text-decoration: none;
+}
+
+.menuPopup--link:hover{
+    color: rgb(54, 119, 253);
+}
+hr{
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top:30px;
+    height: 0;
+    width:25%;
+}
+.menuPopup__social{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   padding-top:50px;
+   margin-bottom:50px;
+    
+}
+.menuPopup__social__item{
+    border-radius: 50%;
+    width: 51px;
+    height: 51px;  
+    margin:10px;
+}
+.menuPopup__social__item--github{
+    background:url("../images/github-logo.png");
+    background-size:70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(225, 225, 225);
+}
+.menuPopup__social__item--facebook{
+    background:url("../images/facebook-logo.png");
+    background-size:70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(225, 225, 225);
+}
+.menuPopup__social__item--email{
+    background:url("../images/mail-black-envelope-symbol.png");
+    background-size:70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(225, 225, 225);
+}
+
+.menuPopup__social__item--facebook:hover, .menuPopup__social__item--github:hover, .menuPopup__social__item--email:hover{
+    background-color: rgb(53,100,252);
+}
 
 

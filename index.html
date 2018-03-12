@@ -32,7 +32,7 @@
     </button>
     <div class="welcome--arrow lastItem"></div>
 </section>
-<section class="aboutMe">
+<section class="aboutMe" id="o-mnie">
     <div class="container">
         <h1 >O mnie</h1>
         <p>
@@ -40,7 +40,7 @@
         </p>
     </div>
 </section>
-<section class="skills">
+<section class="skills" id="umiejetnosci">
     <div class="container skillContener">
             <h1 class="skills__header">Umiejętności</h1>
         <div class = "skillContener__box">
@@ -75,7 +75,7 @@
         </div>
      </div>
 </section>
-        <section class="projects">
+        <section class="projects" id="projekty">
                 <div class="container projectsContainer">
                         <h1 class="projects__header">Wykonane projekty</h1>
                     <div class="projectsContainer__box projectsContainer__box__weatherApp"></div>
@@ -86,7 +86,7 @@
                     <div class="projectsContainer__box projectsContainer__box__fundacjaWeb"></div>
                 </div>
         </section>
-        <section class="hireMe">
+        <section class="hireMe" id="ozatrudnij-mnie">
             <div class="container hireMe__container">
                 <h1>Potrzebujesz programisty Front-End? <span class="hireMe--ready">Jestem gotowy!</span></h1>
                 <button class="btnHire">
@@ -94,17 +94,77 @@
                 </button>
         </div>
         </section>
+        <div class= "container menuPopup">
+            <button class="menuPopup__btnExit">
+                <div class="menuPopup__btnExit__line menuPopup__btnExit__line--line1"></div>
+                <div class="menuPopup__btnExit__line menuPopup__btnExit__line--line2"></div>
+            </button>
+            <ul>
+                <li><a class="menuPopup--link" href="#o-mnie">O mnie</a></li>
+                <li><a class="menuPopup--link" href="#umiejetnosci">Umiejętności</a></li>
+                <li><a class="menuPopup--link" href="#projekty">Projekty</a></li>
+                <li><a class="menuPopup--link" href="#zatrudnij-mnie">Zatrudnij mnie</a></li>
+            </ul>
+            <hr>
+            <div class="menuPopup__social">
+                <div class="menuPopup__social__item menuPopup__social__item--github"></div>
+                <div class="menuPopup__social__item menuPopup__social__item--facebook"></div>
+                <div class="menuPopup__social__item menuPopup__social__item--email"></div>
+            </div>
+        </div>
         <footer>Sebastian Maliszewski 2018</footer>
     
 
         <script>
+            function onLoad(){
+                const menuPopup = document.querySelector(".menuPopup")
+                menuPopup.classList.add("displayNone");
+            }
+        onLoad();
+            
+            function showMenu(){
+                const menuPopup = document.querySelector(".menuPopup");
+                menuPopup.classList.remove("displayNone");
+
+                document.querySelector(".menuPopup__btnExit").addEventListener("click",closeMenu);
+                const linki = [];
+                for(let i =0;i< document.querySelectorAll(".menuPopup--link").length;i++){
+                    linki[i] = document.querySelectorAll(".menuPopup--link")[i];
+                    linki[i].addEventListener("click",closeMenu);
+                }
+            }
+            function closeMenu(){
+                const menuPopup = document.querySelector(".menuPopup");
+                menuPopup.classList.add("displayNone");
+            }
+        
         const button = document.querySelector(".welcome__menubtn");
+        const line = [];
+        for(let i= 0; i<document.querySelectorAll(".line").length;i++){
+            line[i] = document.querySelectorAll(".line")[i];
+        }
         button.addEventListener("click",e=>{
-            console.log(e);
+            
             for(let i =0;i<e.target.children.length;i++){
                 e.target.children[i].classList.toggle("open"+[i])
             }
+            showMenu();
         })
+        document.addEventListener("scroll",function(){
+            let wScroll = window.scrollY;
+            if(wScroll+50 <= document.querySelector(".aboutMe").offsetTop){
+                for(let i = 0;i<line.length;i++){
+                    line[i].classList.remove("backgroundBlue");
+                    line[i].classList.add("backgroundWhite");
+                }
+        }else{
+            for(let i = 0;i<line.length;i++){
+                line[i].classList.remove("backgroundWhite");
+                    line[i].classList.add("backgroundBlue");
+                }
+            }
+        })
+        
         
         </script>
 </body>
