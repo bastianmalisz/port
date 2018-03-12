@@ -191,9 +191,12 @@
         function showHire(){
             document.querySelector(".hirePopup").classList.remove("displayNone");
             document.querySelector(".hirePopup__btnExit").addEventListener("click",closeHire);
+            document.querySelector(".darkLayer").classList.remove("displayNone");
+
         }
         function closeHire(){
             document.querySelector(".hirePopup").classList.add("displayNone");
+            document.querySelector(".darkLayer").classList.add("displayNone");
         }
         
         </script>
