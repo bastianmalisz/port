@@ -13,7 +13,11 @@
         
 <div class="navi">
     <div class="container">
-        <button class="welcome--menubtn"></button>
+        <button class="welcome__menubtn">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+        </button>
         <nav></nav>
     </div>
 </div>
@@ -92,5 +96,16 @@
         </section>
         <footer>Sebastian Maliszewski 2018</footer>
     
+
+        <script>
+        const button = document.querySelector(".welcome__menubtn");
+        button.addEventListener("click",e=>{
+            console.log(e);
+            for(let i =0;i<e.target.children.length;i++){
+                e.target.children[i].classList.toggle("open"+[i])
+            }
+        })
+        
+        </script>
 </body>
 </html>
