@@ -86,7 +86,7 @@
                     <div class="projectsContainer__box projectsContainer__box__fundacjaWeb"></div>
                 </div>
         </section>
-        <section class="hireMe" id="ozatrudnij-mnie">
+        <section class="hireMe" id="zatrudnij-mnie">
             <div class="container hireMe__container">
                 <h1>Potrzebujesz programisty Front-End? <span class="hireMe--ready">Jestem gotowy!</span></h1>
                 <button class="btnHire">
@@ -112,6 +112,7 @@
                 <div class="menuPopup__social__item menuPopup__social__item--email"></div>
             </div>
         </div>
+        <div class="darkLayer displayNone"></div>
         <footer>Sebastian Maliszewski 2018</footer>
     
 
@@ -123,9 +124,11 @@
         onLoad();
             
             function showMenu(){
+                
                 const menuPopup = document.querySelector(".menuPopup");
                 menuPopup.classList.remove("displayNone");
-
+                document.querySelector(".darkLayer").classList.remove("displayNone");
+                
                 document.querySelector(".menuPopup__btnExit").addEventListener("click",closeMenu);
                 const linki = [];
                 for(let i =0;i< document.querySelectorAll(".menuPopup--link").length;i++){
@@ -136,6 +139,7 @@
             function closeMenu(){
                 const menuPopup = document.querySelector(".menuPopup");
                 menuPopup.classList.add("displayNone");
+                document.querySelector(".darkLayer").classList.add("displayNone");
             }
         
         const button = document.querySelector(".welcome__menubtn");
