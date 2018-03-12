@@ -112,6 +112,21 @@
                 <div class="menuPopup__social__item menuPopup__social__item--email"></div>
             </div>
         </div>
+        
+            <div class="hirePopup displayNone">
+                <button class="hirePopup__btnExit">
+                    <div class="hirePopup__btnExit__line hirePopup__btnExit__line--line1"></div>
+                    <div class="hirePopup__btnExit__line hirePopup__btnExit__line--line2"></div>
+                </button>
+                <h1>Zatrudnij mnie</h1>
+                <form class="hirePopup__form">
+                    <input class="hirePopup__form__input hirePopup__form__input--name" type="text" name="name" placeholder="Twoje imię" required>
+                    <input class="hirePopup__form__input hirePopup__form__input--email" type="email" name="email" placeholder="Twój email" required>
+                    <textarea class="hirePopup__form__input hirePopup__form__input--message"  name="message" placeholder="Wiadomość" required></textarea>
+                    <input class="hirePopup__form__input hirePopup__form__input--submit" type="submit" value="Wyślij">
+                </form>
+            </div>
+       
         <div class="darkLayer displayNone"></div>
         <footer>Sebastian Maliszewski 2018</footer>
     
@@ -169,6 +184,17 @@
             }
         })
         
+        const hireBtns = [];
+        for(let i =0;i<document.querySelectorAll(".btnHire").length;i++){
+             document.querySelectorAll(".btnHire")[i].addEventListener("click",showHire);
+        }
+        function showHire(){
+            document.querySelector(".hirePopup").classList.remove("displayNone");
+            document.querySelector(".hirePopup__btnExit").addEventListener("click",closeHire);
+        }
+        function closeHire(){
+            document.querySelector(".hirePopup").classList.add("displayNone");
+        }
         
         </script>
 </body>
