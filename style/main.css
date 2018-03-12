@@ -6,6 +6,9 @@ html,body{
     font-family: "Lato", 'Arial, helvetica, sans-serif';
     position: relative;
 }
+.lastItem{
+    margin-top: auto;
+}
 
 .container{
     width: 1200px;
@@ -51,9 +54,12 @@ html,body{
     background-size:contain;
     background-repeat: no-repeat;
     background-color: rgb(255, 255, 255);
+    margin-top:auto;
     position:relative;
     width: 125px;
     height: 125px;  
+    
+    
 }
 
 .welcome__circle:after{
@@ -136,7 +142,8 @@ html,body{
     background-repeat: no-repeat;
     width: 15px;
     height: 30px; 
-    bottom:20px;
+    margin-bottom:50px;
+    
 }
 
 /* Section About Me  45vh */
