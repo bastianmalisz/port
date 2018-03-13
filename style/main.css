@@ -35,7 +35,10 @@ html,body{
     height:100%;
     margin: 0 auto;
 }
-
+.container-fixed{
+    width: 1200px;
+    margin: 0 auto;
+}
 .container-fluid{
     width: 100%;
     margin: 0 auto;
@@ -654,8 +657,100 @@ hr{
 }
 .hirePopup__form__input:focus{
     outline: none;
-    box-shadow: 0px 0px 2px rgb(54, 119, 253);
+    box-shadow: 0px 0px 2px rgba(54, 120, 253, 0.87);
 }
 
+/* Projects popup */
 
+.projectPopup{
+    background-color:white;
+    border-radius: 10px;
+    position:fixed;
+    top:5%;
+    left: 50%;
+    margin-left: -600px;
+    z-index:2;
+}
+.projectPopup__header{
+    box-sizing: border-box;
+    background-color: rgb(241, 248, 255);
+    display:flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding:15px;
+    width:100%;
+}
+.projectPopup__header--icon{
+    background: url("../images/cloud.png");
+    background-size: contain;
+    background-repeat:no-repeat;
+    background-position: center;
+    margin-left:15px;
+    width:30px;
+    height:30px;
+}
 
+.projectPopup__header--title{
+    font-size: 34px;
+    color: rgb(54, 119, 253);
+    line-height: 0.702;
+    text-align: center;
+    margin-left:15px;
+    margin-right:30px;
+}
+.projectPopup__header--tags{
+    font-size: 13px;
+    color: rgb(90, 90, 90);
+    line-height: 1.9888;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(90, 90, 90);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0);  
+    margin-left:15px;
+    padding-right:8px;
+    padding-left:8px;
+    height:50%;
+    opacity:0.3;
+}
+
+.projectPopup__btnExit{
+    border:none;
+    background-color:transparent;
+    position:relative;
+    left:46%;
+    width:30px;
+    height:30px;
+    margin-top:5px;
+    cursor: pointer;
+}
+
+.hirePopup__btnExit:focus{
+    outline:none;
+}
+
+.projectPopup__header__line{
+    background-color:rgb(53,100,252);
+    width:18px;
+    height:2px;
+}
+
+.projectPopup__header__line--line1{
+    transform: rotate(45deg) translateX(1px);
+}
+
+.projectPopup__header__line--line2{
+    transform: rotate(-45deg) translateX(1px);
+}
+
+.projectPopup__content > img{
+    position:relative;
+    left: 2.5%;
+    width:95%;
+    
+    
+    
+}

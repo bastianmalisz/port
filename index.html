@@ -8,6 +8,10 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <title>Sebastian Maliszewski frontend portfolio</title>
     <link rel = "stylesheet" href="style/main.css">
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
 </head>
 <body>
         
@@ -23,7 +27,6 @@
 </div>
 
 <section class="welcome">
-    <!-- <div class="welcome--lines"></div> -->
     <div class="welcome__circle"></div>
     <h1 class="welcome--header">Witaj w Portfolio</h1>
     <h4 class="welcome--header3">Spójrz na moje projekty i poznaj mnie.</h4>
@@ -78,12 +81,12 @@
         <section class="projects" id="projekty">
                 <div class="container projectsContainer">
                         <h1 class="projects__header">Wykonane projekty</h1>
-                    <div class="projectsContainer__box projectsContainer__box__weatherApp"></div>
-                    <div class="projectsContainer__box projectsContainer__box__calendarApp"></div>
-                    <div class="projectsContainer__box projectsContainer__box__textEditor"></div>
-                    <div class="projectsContainer__box projectsContainer__box__musicPlayer"></div>
-                    <div class="projectsContainer__box projectsContainer__box__fryzjerWeb"></div>
-                    <div class="projectsContainer__box projectsContainer__box__fundacjaWeb"></div>
+                    <div class="projectsContainer__box projectsContainer__box__weatherApp" data-project="weatherApp" data-tagsCount=5></div>
+                    <div class="projectsContainer__box projectsContainer__box__calendarApp" data-project="calendarApp" data-tagsCount=3></div>
+                    <div class="projectsContainer__box projectsContainer__box__textEditor" data-project="textEditor" data-tagsCount=2></div>
+                    <div class="projectsContainer__box projectsContainer__box__musicPlayer" data-project="musicPlayer" data-tagsCount=3></div>
+                    <div class="projectsContainer__box projectsContainer__box__fryzjerWeb" data-project="fryzjerWeb" data-tagsCount=3></div>
+                    <div class="projectsContainer__box projectsContainer__box__fundacjaWeb" data-project="fundacjaWeb" data-tagsCount=1></div>
                 </div>
         </section>
         <section class="hireMe" id="zatrudnij-mnie">
@@ -126,7 +129,24 @@
                     <input class="hirePopup__form__input hirePopup__form__input--submit" type="submit" value="Wyślij">
                 </form>
             </div>
-       
+            <div class ="container-fixed projectPopup displayNone">
+                <div class="projectPopup__header">
+                    <div class="projectPopup__header--icon"></div>
+                    <div class="projectPopup__header--title">
+                        Lorem Ipsum
+                    </div>
+                    <!-- <div class="projectPopup__header--tags">Lorem</div>
+                    <div class="projectPopup__header--tags">Ipsum</div>
+                    <div class="projectPopup__header--tags">Dolor</div> -->
+                    <button class="projectPopup__btnExit">
+                        <div class="hirePopup__btnExit__line hirePopup__btnExit__line--line1"></div>
+                        <div class="hirePopup__btnExit__line hirePopup__btnExit__line--line2"></div>
+                    </button>
+                </div>
+                <div class="projectPopup__content">
+                    <img src="./images/kasia-salon.png">
+                </div>
+            </div>
         <div class="darkLayer displayNone"></div>
         <footer>Sebastian Maliszewski 2018</footer>
     
@@ -199,6 +219,89 @@
             document.querySelector(".darkLayer").classList.add("displayNone");
         }
         
+        const projects = [];
+            for(let i =0;i<document.querySelectorAll(".projectsContainer__box").length;i++){
+                document.querySelectorAll(".projectsContainer__box")[i].addEventListener("click",e=>{
+                    showProjectBox(e);
+                });
+            }
+
+        function showProjectBox(e){
+            document.querySelector(".projectPopup").classList.remove("displayNone");
+            document.querySelector(".projectPopup__btnExit").addEventListener("click",closeProjectBox);
+            document.querySelector(".darkLayer").classList.remove("displayNone");
+            
+            const projHeaderIcon = document.querySelector(".projectPopup__header--icon");
+            const projHeaderTitle = document.querySelector(".projectPopup__header--title");
+            
+            // Umieszczam tyle tagow ile ma dany element ustawionych lecz zanim umieszcze niszcze te, ktore mogly zostac z poprzedniego klikniecia w aplikacje
+            
+            // A teraz umieszczam elementy w rodzicu header
+                for(let i =1;i<=parseInt( e.target.dataset.tagscount);i++){
+                    const CreateDiv = document.createElement("div");
+                    document.querySelector(".projectPopup__header").appendChild(CreateDiv).classList.add(".projectPopup__header--tags");
+                    console.log("TWORZE DIV")
+                }
+            
+            const pogoda = {
+                iconURL: "../images/cloud.png", 
+                title: "Aplikacja pogoda",
+                tags: ["JS","ES6","speechApi","ajax","jQuery"],
+                };
+            const kalendarz = {
+                iconURL: "../images/calendar.png", 
+                title: "Aplikacja kalendarz",
+                tags: ["JS","ES6","jQuery"],
+                };
+            const textEditor = {
+                iconURL: "../images/text-file-editor.png",
+                title: "Aplikacja edytor",
+                tags: ["JS","ES6"],
+                };
+            const musicPlayer = {
+                iconURL: "../images/music-player.png",
+                title: "Aplikacja music player",
+                tags: ["JS","Web Audio API", "canvas"],
+                };
+            const webFryzjer = {
+                iconURL: "../images/computer-screen.png",
+                title: "Witryna fryzjerska",
+                tags: ["Bootstrap","JS","RWD"],
+                };
+            const webFundacja = {
+                iconURL: "../images/computer-screen2.png",
+                title: "Witryna fundacji",
+                tags: ["Wordpress"],
+                };
+            
+            // switch(e.target.dataset.project) {
+            //     case "weatherApp":
+        
+            //         break;
+            //     case "calendarApp":
+            //         code block
+            //         break;
+            //     case "textEditor":
+            //         code block
+            //         break;
+            //     case "musicPlayer":
+            //         code block
+            //         break;
+            //     case "fryzjerWeb":
+            //         code block
+            //         break;
+            //     case "fundacjaWeb":
+            //         code block
+            //         break;
+            //     default:
+            //         code block
+            // }
+            console.log(e);
+        }
+        function closeProjectBox(){
+            document.querySelector(".projectPopup").classList.add("displayNone");
+            document.querySelector(".darkLayer").classList.add("displayNone");
+}
         </script>
 </body>
 </html>
