@@ -134,10 +134,13 @@ html,body{
     width: 150px;
     height: 35px;
     cursor: pointer;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) .35s all;
+  }
+  .btnHire:hover{
+    box-shadow:0px 0px 15px rgba(16, 52, 170, 0.747);
   }
 
 .btnHire__span{
-    font-family: "Lato";
     font-size: 12px;
     color: rgb(54, 149, 255);
     font-weight: bold;
@@ -153,6 +156,7 @@ html,body{
     width: 15px;
     height: 30px; 
     margin-bottom:50px;
+    cursor: pointer;
     
 }
 
@@ -389,6 +393,10 @@ box-shadow: 0px 0px 5px rgb(54, 148, 255);
 }
 .hireMe__container > button{
     margin-left:30px;
+    transition: 0.35s all cubic-bezier(0.19, 1, 0.22, 1)
+}
+.hireMe__container > button:hover{
+    box-shadow:0px 0px 15px rgba(16, 52, 170, 0.747);
 }
 .hireMe--ready{
     font-weight:800;
@@ -434,35 +442,7 @@ footer{
     height:2px;
     background-color: rgba(255, 255, 255, 0.808);
     transform-origin: 0%;
-    animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
     z-index:-1;
-}
-.open0{
-    animation-name: line1;
-    animation-duration: .3s;
-    animation-fill-mode: forwards;
-}
-.open1{
-    animation-name: line2;
-    animation-duration: .3s;
-    animation-fill-mode: forwards;
-}
-.open2{
-    animation-name: line3;
-    animation-duration: .3s;
-    animation-fill-mode: forwards; 
-}
-@keyframes line1{
-    from{ transform: rotate(0deg) }
-    to{ transform: rotate(45deg) translateX(10%) translateY(-100%)}     
-}
-@keyframes line2{
-    from{ transform: translateX(0); opacity:1}
-    to{ transform: translateX(-150%); opacity:0}     
-}
-@keyframes line3{
-    from{ transform: rotate(0deg) translateY(0px) translateX(0px)}
-    to{ transform: rotate(-45deg) translateY(50%) translateX(15%)}     
 }
 
 /* menuPopup */
@@ -659,7 +639,14 @@ hr{
     background-image: -webkit-linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%);
     background-image: -ms-linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%);
     width: 150px;   
+    cursor:pointer;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 0.35s all;
 }
+
+.hirePopup__form__input--submit:hover{
+    box-shadow:0px 0px 5px rgb(53,100,252);
+}
+
 .hirePopup__form__input:focus{
     outline: none;
     box-shadow: 0px 0px 2px rgba(54, 120, 253, 0.87);
@@ -751,9 +738,41 @@ hr{
 
 .projectPopup__content > img{
     position:relative;
-    left: 2.5%;
-    width:95%;
+    left: 12.5%;
+    width:75%;
+}
+.projectPopup__links{
+    background-color: rgb(241, 248, 255);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding:10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
     
-    
-    
+}
+.projectPopup__links--live, .projectPopup__links--github{
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(54, 149, 255);
+    text-transform: uppercase;
+    line-height: 1.875;
+    text-align: center;
+    background-color:rgb(53,100,252);
+    border: none;
+    border-radius: 20px;
+    width: 150px;
+    height: 35px;
+    cursor: pointer;
+    transition: 0.35s all cubic-bezier(0.19, 1, 0.22, 1)
+}
+
+.projectPopup__links--live:hover, .projectPopup__links--github:hover{
+    box-shadow:0px 0px 15px rgb(53,100,252);
+}
+
+.projectPopup__links--live> a ,.projectPopup__links--github > a{
+    text-decoration: none;
+    color:white;
 }
