@@ -135,16 +135,13 @@
                     <div class="projectPopup__header--title">
                         Lorem Ipsum
                     </div>
-                    <!-- <div class="projectPopup__header--tags">Lorem</div>
-                    <div class="projectPopup__header--tags">Ipsum</div>
-                    <div class="projectPopup__header--tags">Dolor</div> -->
-                    <button class="projectPopup__btnExit">
+                    <button class="projectPopup__btnExit lastItemRight">
                         <div class="hirePopup__btnExit__line hirePopup__btnExit__line--line1"></div>
                         <div class="hirePopup__btnExit__line hirePopup__btnExit__line--line2"></div>
                     </button>
                 </div>
                 <div class="projectPopup__content">
-                    <img src="./images/kasia-salon.png">
+                    <img  class ="projectPopup__content--image" src="./images/kasia-salon.png">
                 </div>
             </div>
         <div class="darkLayer displayNone"></div>
@@ -231,77 +228,130 @@
             document.querySelector(".projectPopup__btnExit").addEventListener("click",closeProjectBox);
             document.querySelector(".darkLayer").classList.remove("displayNone");
             
-            const projHeaderIcon = document.querySelector(".projectPopup__header--icon");
-            const projHeaderTitle = document.querySelector(".projectPopup__header--title");
+           
             
-            // Umieszczam tyle tagow ile ma dany element ustawionych lecz zanim umieszcze niszcze te, ktore mogly zostac z poprzedniego klikniecia w aplikacje
-            
-            // A teraz umieszczam elementy w rodzicu header
+            // Umieszczam tyle tagow ile ma dany element ustawionych w atrybucie data
                 for(let i =1;i<=parseInt( e.target.dataset.tagscount);i++){
                     const CreateDiv = document.createElement("div");
-                    document.querySelector(".projectPopup__header").appendChild(CreateDiv).classList.add(".projectPopup__header--tags");
+                    document.querySelector(".projectPopup__header").appendChild(CreateDiv);
+                    CreateDiv.classList.add("projectPopup__header--tags");
                     console.log("TWORZE DIV")
                 }
-            
+            // tworze obiekty z informacjami
             const pogoda = {
-                iconURL: "../images/cloud.png", 
+                imageURL:"./images/pogodaimg.jpg",
+                iconURL: "./images/cloud.png", 
                 title: "Aplikacja pogoda",
                 tags: ["JS","ES6","speechApi","ajax","jQuery"],
                 };
             const kalendarz = {
-                iconURL: "../images/calendar.png", 
+                imageURL:"./images/calendarimg.jpg",
+                iconURL: "./images/calendar.png", 
                 title: "Aplikacja kalendarz",
                 tags: ["JS","ES6","jQuery"],
                 };
             const textEditor = {
-                iconURL: "../images/text-file-editor.png",
+                imageURL:"./images/editorimg.png",
+                iconURL: "./images/text-file-editor.png",
                 title: "Aplikacja edytor",
                 tags: ["JS","ES6"],
                 };
             const musicPlayer = {
-                iconURL: "../images/music-player.png",
+                imageURL:"./images/muzykaimg.jpg",
+                iconURL: "./images/music-player.png",
                 title: "Aplikacja music player",
                 tags: ["JS","Web Audio API", "canvas"],
                 };
             const webFryzjer = {
-                iconURL: "../images/computer-screen.png",
+                imageURL:"./images/kasia-salon.png",
+                iconURL: "./images/computer-screen.png",
                 title: "Witryna fryzjerska",
                 tags: ["Bootstrap","JS","RWD"],
                 };
             const webFundacja = {
-                iconURL: "../images/computer-screen2.png",
+                imageURL:"./images/maliwojownicy.png",
+                iconURL: "./images/computer-screen2.png",
                 title: "Witryna fundacji",
                 tags: ["Wordpress"],
                 };
-            
-            // switch(e.target.dataset.project) {
-            //     case "weatherApp":
-        
-            //         break;
-            //     case "calendarApp":
-            //         code block
-            //         break;
-            //     case "textEditor":
-            //         code block
-            //         break;
-            //     case "musicPlayer":
-            //         code block
-            //         break;
-            //     case "fryzjerWeb":
-            //         code block
-            //         break;
-            //     case "fundacjaWeb":
-            //         code block
-            //         break;
-            //     default:
-            //         code block
-            // }
+            // Ustawiam zmienne przetrzymujące elementy DOM iezbędne do manipulacji
+            const projIcon = document.querySelector(".projectPopup__header--icon");
+            const projTitle = document.querySelector(".projectPopup__header--title");
+            const projTag = document.querySelectorAll(".projectPopup__header--tags");
+            const projTags = [];
+            for(let i =0;i< projTag.length;i++){
+                projTags[i] = projTag[i];
+            }
+            const projImg = document.querySelector(".projectPopup__content--image");
+
+            // switch, który ustawi informacje zgodnie z warunkiem już w elemencie DOM
+            switch(e.target.dataset.project) {
+                case "weatherApp":
+
+                    projIcon.style.backgroundImage = "url("+pogoda.iconURL+")"; 
+                    projTitle.innerHTML = pogoda.title;
+                    for(i = 0;i<projTags.length;i++){
+                        projTags[i].innerHTML=pogoda.tags[i];
+                    }
+                    projImg.src = pogoda.imageURL;
+                    break;
+
+                case "calendarApp":
+                    projIcon.style.backgroundImage = "url("+kalendarz.iconURL+")"; 
+                    projTitle.innerHTML = kalendarz.title;
+                    for(i = 0;i<projTags.length;i++){
+                        projTags[i].innerHTML=kalendarz.tags[i];
+                        }
+                    projImg.src = kalendarz.imageURL;
+                    break;
+
+                case "textEditor":
+                    projIcon.style.backgroundImage = "url("+textEditor.iconURL+")"; 
+                    projTitle.innerHTML = textEditor.title;
+                    for(i = 0;i<projTags.length;i++){
+                        projTags[i].innerHTML=textEditor.tags[i];
+                        }
+                    projImg.src = textEditor.imageURL;
+                    break;
+
+                case "musicPlayer":
+                    projIcon.style.backgroundImage = "url("+musicPlayer.iconURL+")"; 
+                    projTitle.innerHTML = musicPlayer.title;
+                    for(i = 0;i<projTags.length;i++){
+                        projTags[i].innerHTML=musicPlayer.tags[i];
+                        }
+                    projImg.src = musicPlayer.imageURL;
+                    break;
+
+                case "fryzjerWeb":
+                    projIcon.style.backgroundImage = "url("+webFryzjer.iconURL+")"; 
+                    projTitle.innerHTML = webFryzjer.title;
+                    for(i = 0;i<projTags.length;i++){
+                        projTags[i].innerHTML=webFryzjer.tags[i];
+                        }
+                    projImg.src = webFryzjer.imageURL;
+                    break;
+
+                case "fundacjaWeb":
+                    projIcon.style.backgroundImage = "url("+webFundacja.iconURL+")"; 
+                    projTitle.innerHTML = webFundacja.title;
+                    for(i = 0;i<projTags.length;i++){
+                        projTags[i].innerHTML=webFundacja.tags[i];
+                        }
+                    projImg.src = webFundacja.imageURL;
+                    break;
+                default:
+                    return;
+            }
             console.log(e);
         }
+
         function closeProjectBox() {
             document.querySelector(".projectPopup").classList.add("displayNone");
             document.querySelector(".darkLayer").classList.add("displayNone");
-}
+            $("div").remove(".projectPopup__header--tags");
+        }           
+
         </script>
 </body>
 </html>

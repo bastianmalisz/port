@@ -20,6 +20,7 @@ html,body{
 .lastItem{
     margin-top: auto;
 }
+
 .backgroundWhite{
     background-color:white!important;
 }
@@ -683,7 +684,6 @@ hr{
     width:100%;
 }
 .projectPopup__header--icon{
-    background: url("../images/cloud.png");
     background-size: contain;
     background-repeat:no-repeat;
     background-position: center;
@@ -720,11 +720,10 @@ hr{
 .projectPopup__btnExit{
     border:none;
     background-color:transparent;
-    position:relative;
-    left:46%;
+    left:95%;
+    position:absolute;
     width:30px;
     height:30px;
-    margin-top:5px;
     cursor: pointer;
 }
 
