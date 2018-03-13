@@ -318,6 +318,10 @@ html,body{
     width:calc(100% / 4);
     height: 30%;
     cursor: pointer;
+    transition: .3s all cubic-bezier(0.19, 1, 0.22, 1);
+}
+.projectsContainer__box:hover{
+box-shadow: 0px 0px 4px rgba(54, 148, 255, 0.795);
 }
 .projectsContainer__box__weatherApp{
     background: url("../images/cloud.png");
