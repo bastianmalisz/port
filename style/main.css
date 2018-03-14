@@ -400,19 +400,7 @@ box-shadow: 0px 0px 5px rgb(54, 148, 255);
 .hireMe--ready{
     font-weight:800;
 }
-footer{
-    font-weight:300;
-    font-size:12px;
-    line-height:-20px;
-    color:white;
-    letter-spacing:1.5px;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    width:100%;
-    height:20px;
-    opacity:0.75;   
-}
+
 
 /* Button menu*/
 .welcome__menubtn{
@@ -895,15 +883,10 @@ hr{
     font-size: 10px;
     line-height: 0.875;
 }
-footer{
-    font-size: 10px;
-    bottom: -7px;
-    opacity: .5;
 
 }
-}
 /* SMALL */
-@media (max-width: 420px) and  (min-width: 359px) {
+@media (min-width: 359px) and (max-width: 479px) {
 
     .container{
         width: 350px;
@@ -997,15 +980,10 @@ footer{
         font-size: 10px;
         line-height: 0.875;
     }
-    footer{
-        font-size: 10px;
-        bottom: -7px;
-        opacity: .5;
-
-    }
+  
 }
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
+@media (min-width: 480px) and (max-width: 767px){
     .container{
         width: 550px;
     }
@@ -1098,10 +1076,47 @@ footer{
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1199px) {
+    .container{
+        width:750px;
+    }
+    .skillContener__box{
+        margin-right: 80px;
+        margin-left: 80px;
+    }
+    .skillContener__box--header {
+        font-size: 15px;
+    }
+    .projectsContainer__box {
+        height: 120px;
+        margin-right: 10px;
+        margin-top: 10px;
+ }
+ .menuPopup{
+    margin-left: -375px;
+ }
+ .projectPopup{
+    margin-left: -375px;
 
  }
-
+ body > div.container.projectPopup > div.projectPopup__header > button{
+    margin-top:0px;
+ }
+ .projectPopup__btnExit{
+     margin-top:0px;
+     left: 95%;
+     top: 1%;
+ 
+ }
+ .projectPopup__header--title {
+    font-size: 26px;
+ }
+ .projectPopup__header--icon {
+    width: 30px;
+    height: 30px;
+    margin-right:5px;
+ }
+}
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
 
