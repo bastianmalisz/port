@@ -498,6 +498,7 @@ ul,li{
     color: rgb(210, 210, 210);
     line-height: 1.96;
     text-decoration: none;
+    transition: 0.35s cubic-bezier(0.455, 0.03, 0.515, 0.955) all
 }
 
 .menuPopup--link:hover{
@@ -526,6 +527,7 @@ hr{
     height: 51px;  
     margin:10px;
     cursor: pointer;
+    transition: 0.35s cubic-bezier(0.455, 0.03, 0.515, 0.955) all
 }
 .menuPopup__social__item--github{
     background:url("../images/github-logo.png");
@@ -779,13 +781,129 @@ hr{
 
 /* RWD */
 /* ULTRA ULTRA SMALL */
-@media (max-width: 340px){
+@media only screen and (max-width: 359px){
 .container{
     width: 300px;
 }
+.aboutMe > .container > p{
+    line-height:1.7;
+}
+.hirePopup{
+    left:10%;
+    min-width: 80%;
+    top: 2%;
+
+}
+.menuPopup{
+    margin-left: -150px;
+}
+
+.menuPopup__social{
+    padding-top: 0px;
+    margin-bottom: 0px;
+}
+hr{
+    margin-top: -5px;
+    height: 0;
+    width: 60%;
+}
+.menuPopup__btnExit{
+    margin-top: 2px;
+    left: 45%;
+}
+.welcome--header{
+    font-size: 34px;
+}
+.welcome__circle{
+    margin-top: 50px;
+}
+.welcome--arrow{
+    margin-top: 15px;
+}
+.skills__header{
+    font-size: 36px;
+}
+.skillContener__box{
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.projectPopup{
+    margin-left: -150px;
+}
+.skills__header{
+    font-size: 36px;
+}
+
+
+.skillContener__box--header{
+    font-size: 18px;
+}
+
+.skillContener__box--paragraph{
+    font-size:14px;
+    line-height: 1.2188;
+    width: 170%;
+}
+
+.projects__header{
+    font-size:34px;
+}
+
+.projectsContainer__box{
+    margin-right: 10px;
+    margin-top: 10px;
+    height: 100px;
+    width: calc(100% / 3);
+}
+
+.projectPopup__header--icon{
+    margin-left: 0px;
+    margin-top:-10px;
+    margin-right: 3px;
+    width: 20px;
+    height: 20px;
+}
+
+.projectPopup__header--title{
+    font-size: 15px;
+    margin-left: 0;
+    margin-right:0;
+    line-height: 0.902;
+
+}
+
+.projectPopup__header--tags{
+    font-size: 8px;
+    border-radius: 15px;
+    margin-left: 3px;
+    margin-top: -9px;
+    padding-right: 4px;
+    padding-left: 4px
+}
+.projectPopup__btnExit{
+    left: 91%;
+    top: 1%;
+}
+.hireMe > .container > h1{
+    font-size: 18.324px;
+}
+.hireMe > div > button > span{
+    width:180px;
+
+}
+.hireMe > div > button > span{
+    font-size: 10px;
+    line-height: 0.875;
+}
+footer{
+    font-size: 10px;
+    bottom: -7px;
+    opacity: .5;
+
+}
 }
 /* SMALL */
-@media (max-width: 420px){
+@media (max-width: 420px) and  (min-width: 359px) {
 
     .container{
         width: 350px;
