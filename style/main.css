@@ -7,6 +7,7 @@ html,body{
     position: relative;
     scroll-behavior: smooth;
 }
+/* Reusable classes for js and not only */
 .darkLayer{
     background-color: black;
     position: fixed;
@@ -15,8 +16,8 @@ html,body{
     width:100%;
     height:100%;
     opacity:0.6;
-    
 }
+
 .lastItem{
     margin-top: auto;
 }
@@ -24,23 +25,17 @@ html,body{
 .backgroundWhite{
     background-color:white!important;
 }
+
 .backgroundBlue{
     background-color: rgb(53,100,252)!important;
 }
+
 .displayNone{
     display:none !important;
 }
 
 .container{
     width: 1200px;
-    margin: 0 auto;
-}
-.container-fixed{
-    width: 1200px;
-    margin: 0 auto;
-}
-.container-fluid{
-    width: 100%;
     margin: 0 auto;
 }
 
@@ -51,16 +46,14 @@ html,body{
     position:fixed;
 }
 
-/* Welcome screen 100vh */
+/* Welcome screen */
 .welcome{
-    /* background: url("../images/welcome_background_lines.png"); */
     background-size: cover;
     background-position:center;
     background-repeat:no-repeat;
     background-image: url("../images/welcome_background_lines.png"), -moz-linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%);
     background-image:url("../images/welcome_background_lines.png"), -webkit-linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%);
     background-image:url("../images/welcome_background_lines.png"), -ms-linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%);
-    
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -81,7 +74,6 @@ html,body{
     position:relative;    
     width: 125px;
     height: 125px;  
-    
 }
 
 .welcome__circle:after{
@@ -135,9 +127,10 @@ html,body{
     cursor: pointer;
     transition: cubic-bezier(0.19, 1, 0.22, 1) .35s all;
   }
-  .btnHire:hover{
+
+.btnHire:hover{
     box-shadow:0px 0px 15px rgba(16, 52, 170, 0.747);
-  }
+}
 
 .btnHire__span{
     font-size: 12px;
@@ -147,6 +140,7 @@ html,body{
     line-height: 1.875;
     text-align: center;
 }
+
 .welcome--arrow{
     background: url("../images/arrow_down.png");
     background-size:contain;
@@ -160,18 +154,20 @@ html,body{
     
 }
 
-/* Section About Me  45vh */
 .aboutMe{
     width:100%;
     display:flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    margin-bottom:30px;
 }
+
 .aboutMe > .container{
     position:relative;
     
 }
+
 .aboutMe > .container > h1{
     font-size: 42px;
     font-weight: 300;
@@ -187,10 +183,9 @@ html,body{
     text-align: center;
   
 }
-/* Section Skills 120vh */
+
 .skills{
     background-color: rgb(241, 248, 255);
-    
 }
 
 .skills__header{
@@ -209,6 +204,7 @@ html,body{
     flex-wrap: wrap;
     align-content: center;
 }
+
 .skillContener__box{
     margin: 5px;
     margin-right: 25px;
@@ -286,6 +282,7 @@ html,body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
     
 }
 
