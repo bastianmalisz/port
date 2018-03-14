@@ -33,7 +33,6 @@ html,body{
 
 .container{
     width: 1200px;
-    height:100%;
     margin: 0 auto;
 }
 .container-fixed{
@@ -61,7 +60,7 @@ html,body{
     background-image: url("../images/welcome_background_lines.png"), -moz-linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%);
     background-image:url("../images/welcome_background_lines.png"), -webkit-linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%);
     background-image:url("../images/welcome_background_lines.png"), -ms-linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%);
-    height:720px;
+    
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -78,8 +77,8 @@ html,body{
     background-size:contain;
     background-repeat: no-repeat;
     background-color: rgb(255, 255, 255);
-    margin-top:auto;
-    position:relative;
+    margin-top:150px;
+    position:relative;    
     width: 125px;
     height: 125px;  
     
@@ -155,6 +154,7 @@ html,body{
     background-repeat: no-repeat;
     width: 15px;
     height: 30px; 
+    margin-top:50px;
     margin-bottom:50px;
     cursor: pointer;
     
@@ -163,7 +163,6 @@ html,body{
 /* Section About Me  45vh */
 .aboutMe{
     width:100%;
-    height:45vh;
     display:flex;
     justify-content: center;
     flex-direction: column;
@@ -171,7 +170,7 @@ html,body{
 }
 .aboutMe > .container{
     position:relative;
-    top:5vh;
+    
 }
 .aboutMe > .container > h1{
     font-size: 42px;
@@ -191,7 +190,7 @@ html,body{
 /* Section Skills 120vh */
 .skills{
     background-color: rgb(241, 248, 255);
-    height: 120vh;
+    
 }
 
 .skills__header{
@@ -287,7 +286,7 @@ html,body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height:120vh;
+    
 }
 
 .projectsContainer{
@@ -320,7 +319,7 @@ html,body{
     flex-direction: column;
     align-items: center;
     width:calc(100% / 4);
-    height: 30%;
+    height: 300px;
     cursor: pointer;
     transition: .3s all cubic-bezier(0.19, 1, 0.22, 1);
 }
@@ -377,7 +376,7 @@ box-shadow: 0px 0px 5px rgb(54, 148, 255);
     background-size:cover;
     background-position:center;
     background-repeat: no-repeat;
-    height:25vh;
+    
 }
 .hireMe__container{
     display:flex;
@@ -424,7 +423,7 @@ footer{
     justify-content:space-around;
     flex-direction: column;
     top:9vh;
-    left: 100%;
+    left: 90%;
     width: 40px;
     height:30px;
     cursor: pointer;
@@ -775,4 +774,134 @@ hr{
 .projectPopup__links--live> a ,.projectPopup__links--github > a{
     text-decoration: none;
     color:white;
+}
+
+
+/* RWD */
+/* ULTRA ULTRA SMALL */
+@media (max-width: 340px){
+.container{
+    width: 300px;
+}
+}
+/* SMALL */
+@media (max-width: 420px){
+
+    .container{
+        width: 350px;
+    }
+    .aboutMe > .container > p{
+        line-height:1.7;
+    }
+    .hirePopup{
+        left:10%;
+        min-width: 80%;
+    }
+
+    .menuPopup{
+        margin-left: -175px;
+    }
+
+    .menuPopup__btnExit{
+        left:43%;
+    }
+    .skills__header{
+        font-size: 36px;
+    }
+    .skillContener__box{
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+
+    .skillContener__box--header{
+        font-size: 18px;
+
+    }
+
+    .skillContener__box--paragraph{
+        font-size:14px;
+        line-height: 1.2188;
+        width: 180%;
+    }
+
+    .projects__header{
+        font-size:36px;
+    }
+
+    .projectsContainer__box{
+        margin-right: 10px;
+        margin-top: 10px;
+        height: 100px;
+
+        width: calc(100% / 3);
+    }
+
+    .projectPopup{
+        margin-left: -175px;
+    }
+
+    .projectPopup__header--icon{
+        margin-left: 0px;
+        margin-top:-10px;
+        margin-right: 3px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .projectPopup__header--title{
+        font-size: 15px;
+        margin-left: 0;
+        margin-right:0;
+        line-height: 0.902;
+
+    }
+
+    .projectPopup__header--tags{
+        font-size: 8px;
+        border-radius: 15px;
+        margin-left: 3px;
+        margin-top: -9px;
+        padding-right: 4px;
+        padding-left: 4px
+    }
+    .projectPopup__btnExit{
+        left: 91%;
+        top: 1%;
+    }
+    .hireMe > .container > h1{
+        font-size: 18.324px;
+    }
+    .hireMe > div > button > span{
+        width:180px;
+
+    }
+    .hireMe > div > button > span{
+        font-size: 10px;
+        line-height: 0.875;
+    }
+    footer{
+        font-size: 10px;
+        bottom: -7px;
+        opacity: .5;
+
+    }
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+ }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+ }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
 }
