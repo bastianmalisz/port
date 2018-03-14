@@ -1006,7 +1006,95 @@ footer{
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+    .container{
+        width: 550px;
+    }
+    .menuPopup{
+        margin-left: -275px;
+    }
+    .welcome__circle{
+        margin-top: 40px;
+    }
+    .welcome--header{
+        font-size: 28px;
+    }
+    .welcome--header3{
+        font-size:12px;
+        margin-top: -10px;
+    }
+    .welcome--arrow{
+        margin-top: 5px;
+    }
+    .skillContener__box--header{
+        font-size:18px;
+    }
+    .skillContener__box--paragraph{
+        font-size: 12px;
+    }
+    .aboutMe > .container > p{
+        line-height: 1.5;
+    }
+    .projectPopup{
+        margin-left:-275px;
+    }
+    .projectsContainer__box{
+        height: 100px;
+        margin-right: 0px; 
+        margin-top: 0px; 
+    }
+    .projectPopup__header--tags{
+        font-size:10px;
+        margin-left: 2px;
 
+    }
+    .projectPopup__header--icon{
+        width: 20px;
+        height: 20px;
+    }
+    .projectPopup__header--title{
+        font-size:20px;
+    }
+    body > div.container.projectPopup > div.projectPopup__header > button{
+        margin-top:-17px;
+    }
+    .hireMe > .container > h1{
+        font-size: 21.324px;
+    }
+    .hirePopup{
+        top: 2%;
+    }
+    .hirePopup__btnExit{
+        left: 44%;
+        margin-top:0px;
+    }
+    
+    .hirePopup > h1{
+        font-size: 30px;
+        margin-top: -10px;
+    }
+    .hirePopup__form__input--message{
+        height: 90px;
+    }
+    .hirePopup__form__input--submit{
+        margin-bottom:5px;
+        margin-top:0px;
+    }
+    .menuPopup--link{
+        font-size: 26px;
+    }
+    hr{
+        margin-top: 5px;
+
+    }
+    .menuPopup__social{
+        padding:0px;
+        margin-bottom: 20px;
+
+    }
+    ul,li{
+        margin-top: -12px;
+
+    }
 }
 
 /* Medium devices (tablets, 768px and up) */
