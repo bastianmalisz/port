@@ -68,8 +68,8 @@ document.querySelector(".darkLayer").classList.add("displayNone");
 }
 
 const projects = [];
-for(let i =0;i<document.querySelectorAll(".projectsContainer__box").length;i++){
-    document.querySelectorAll(".projectsContainer__box")[i].addEventListener("click",e=>{
+for(let i =0;i<document.querySelectorAll(".projects__box").length;i++){
+    document.querySelectorAll(".projects__box")[i].addEventListener("click",e=>{
         showProjectBox(e);
     });
 }

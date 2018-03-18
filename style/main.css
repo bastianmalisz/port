@@ -153,7 +153,6 @@ html,body{
     margin-top:50px;
     margin-bottom:50px;
     cursor: pointer;
-    
 }
 
 .aboutMe{
@@ -305,7 +304,7 @@ html,body{
     width:100%;
 }
 
-.projectsContainer__box{
+.projects__box{
     border-style: solid;
     border-width: 1px;
     border-color: rgb(244, 244, 244);
@@ -322,45 +321,46 @@ html,body{
     cursor: pointer;
     transition: .3s all cubic-bezier(0.19, 1, 0.22, 1);
 }
-.projectsContainer__box:hover{
+.projects__box:hover{
 box-shadow: 0px 0px 5px rgb(54, 148, 255);
 }
-.projectsContainer__box__weatherApp{
+
+.projects—weatherApp{
     background: url("../images/cloud.png");
     background-repeat:no-repeat;
     background-size:40%;
     background-position:center;
     background-color: rgb(244, 244, 244);
 }
-.projectsContainer__box__calendarApp{
+.projects—calendarApp{
     background: url("../images/calendar.png");
     background-repeat:no-repeat;
     background-size:40%;
     background-position:center;
     background-color: rgb(244, 244, 244);
 }
-.projectsContainer__box__textEditor{
+.projects—textEditor{
     background: url("../images/text-file-editor.png");
     background-repeat:no-repeat;
     background-size:40%;
     background-position:center;
     background-color: rgb(244, 244, 244);
 }
-.projectsContainer__box__musicPlayer{
+.projects—musicPlayer{
     background: url("../images/music-player.png");
     background-repeat:no-repeat;
     background-size:40%;
     background-position:center;
     background-color: rgb(244, 244, 244);
 }
-.projectsContainer__box__fryzjerWeb{
+.projects—fryzjerWeb{
     background: url("../images/computer-screen.png");
     background-repeat:no-repeat;
     background-size:40%;
     background-position:center;
     background-color: rgb(244, 244, 244);
 }
-.projectsContainer__box__fundacjaWeb{
+.projects—fundacjaWeb{
     background: url("../images/computer-screen2.png");
     background-repeat:no-repeat;
     background-size:40%;
@@ -872,7 +872,7 @@ hr{
     font-size:34px;
 }
 
-.projectsContainer__box{
+.projects__box{
     margin-right: 10px;
     margin-top: 10px;
     height: 100px;
@@ -976,7 +976,7 @@ hr{
     font-size:36px;
 }
 
-.projectsContainer__box{
+.projects__box{
     margin-right: 10px;
     margin-top: 10px;
     height: 100px; 
@@ -1076,7 +1076,7 @@ hr{
     margin-left:-275px;
 }
 
-.projectsContainer__box{
+.projects__box{
     height: 100px;
     margin-right: 0px; 
     margin-top: 0px; 
@@ -1162,7 +1162,7 @@ ul,li{
     font-size: 15px;
 }
 
-.projectsContainer__box {
+.projects__box {
     margin-right: 10px;
     margin-top: 10px;
     height: 120px;
