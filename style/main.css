@@ -7,6 +7,7 @@ html,body{
     position: relative;
     scroll-behavior: smooth;
 }
+
 /* Reusable classes for js and not only */
 .darkLayer{
     background-color: black;
@@ -366,7 +367,8 @@ box-shadow: 0px 0px 5px rgb(54, 148, 255);
     background-position:center;
     background-color: rgb(244, 244, 244);
 }
-/* Section Hire 35vh */
+
+/* Section Hire */
 .hireMe{
     background-image:url("../images/paski_bg.png"), -moz-linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%);
     background-image:url("../images/paski_bg.png"), -webkit-linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%);
@@ -376,29 +378,33 @@ box-shadow: 0px 0px 5px rgb(54, 148, 255);
     background-repeat: no-repeat;
     
 }
+
 .hireMe__container{
     display:flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
+
 .hireMe > .container > h1{
     font-size: 30.324px;
     font-weight:300;
     line-height: 1.3;
     color: white;
 }
+
 .hireMe__container > button{
     margin-left:30px;
     transition: 0.35s all cubic-bezier(0.19, 1, 0.22, 1)
 }
+
 .hireMe__container > button:hover{
     box-shadow:0px 0px 15px rgba(16, 52, 170, 0.747);
 }
+
 .hireMe--ready{
     font-weight:800;
 }
-
 
 /* Button menu*/
 .welcome__menubtn{
@@ -462,9 +468,11 @@ ul,li{
     margin-top:10px;
     cursor: pointer;
 }
+
 .menuPopup__btnExit:focus{
     outline:none;
 }
+
 .menuPopup__btnExit__line{
     background-color:rgb(53,100,252);
     width:18px;
@@ -490,6 +498,7 @@ ul,li{
 .menuPopup--link:hover{
     color: rgb(54, 119, 253);
 }
+
 hr{
     border: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -498,6 +507,7 @@ hr{
     height: 0;
     width:25%;
 }
+
 .menuPopup__social{
     display:flex;
     flex-direction: row;
@@ -507,6 +517,7 @@ hr{
    margin-bottom:50px;
     
 }
+
 .menuPopup__social__item{
     border-radius: 50%;
     width: 51px;
@@ -515,6 +526,7 @@ hr{
     cursor: pointer;
     transition: 0.35s cubic-bezier(0.455, 0.03, 0.515, 0.955) all
 }
+
 .menuPopup__social__item--github{
     background:url("../images/github-logo.png");
     background-size:70%;
@@ -522,6 +534,7 @@ hr{
     background-position: center;
     background-color: rgb(225, 225, 225);
 }
+
 .menuPopup__social__item--facebook{
     background:url("../images/facebook-logo.png");
     background-size:70%;
@@ -529,6 +542,7 @@ hr{
     background-position: center;
     background-color: rgb(225, 225, 225);
 }
+
 .menuPopup__social__item--email{
     background:url("../images/mail-black-envelope-symbol.png");
     background-size:70%;
@@ -564,9 +578,11 @@ hr{
     margin-top:5px;
     cursor: pointer;
 }
+
 .hirePopup__btnExit:focus{
     outline:none;
 }
+
 .hirePopup__btnExit__line{
     background-color:rgb(53,100,252);
     width:18px;
@@ -588,12 +604,14 @@ hr{
     line-height: 1.56;
     text-align: center;  
 }
+
 .hirePopup__form{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 .hirePopup__form__input{
     color: rgba(90, 90, 90, 0.502);
     line-height: 2.188;
@@ -607,6 +625,7 @@ hr{
     background-color: rgb(255, 255, 255);
     width:60%; 
 }
+
 .hirePopup__form__input--message{
     height:120px;
     resize: none;
@@ -650,6 +669,7 @@ hr{
     margin-left: -600px;
     z-index:2;
 }
+
 .projectPopup__header{
     box-sizing: border-box;
     background-color: rgb(241, 248, 255);
@@ -661,6 +681,7 @@ hr{
     padding:15px;
     width:100%;
 }
+
 .projectPopup__header--icon{
     background-size: contain;
     background-repeat:no-repeat;
@@ -678,6 +699,7 @@ hr{
     margin-left:15px;
     margin-right:30px;
 }
+
 .projectPopup__header--tags{
     font-size: 13px;
     color: rgb(90, 90, 90);
@@ -728,6 +750,7 @@ hr{
     left: 12.5%;
     width:75%;
 }
+
 .projectPopup__links{
     background-color: rgb(241, 248, 255);
     border-bottom-left-radius: 10px;
@@ -739,6 +762,7 @@ hr{
     align-items: center;
     
 }
+
 .projectPopup__links--live, .projectPopup__links--github{
     font-size: 16px;
     font-weight: 500;
@@ -765,7 +789,9 @@ hr{
 }
 
 
-/* RWD */
+                                                    /* \\\  RWD  /// */
+
+
 /* ULTRA ULTRA SMALL */
 @media only screen and (max-width: 359px){
 .container{
@@ -774,12 +800,14 @@ hr{
 .aboutMe > .container > p{
     line-height:1.7;
 }
+
 .hirePopup{
     left:10%;
     min-width: 80%;
     top: 2%;
 
 }
+
 .menuPopup{
     margin-left: -150px;
 }
@@ -788,34 +816,43 @@ hr{
     padding-top: 0px;
     margin-bottom: 0px;
 }
+
 hr{
     margin-top: -5px;
     height: 0;
     width: 60%;
 }
+
 .menuPopup__btnExit{
     margin-top: 2px;
     left: 45%;
 }
+
 .welcome--header{
     font-size: 34px;
 }
+
 .welcome__circle{
     margin-top: 50px;
 }
+
 .welcome--arrow{
     margin-top: 15px;
 }
+
 .skills__header{
     font-size: 36px;
 }
+
 .skillContener__box{
     margin-right: 30px;
     margin-left: 30px;
 }
+
 .projectPopup{
     margin-left: -150px;
 }
+
 .skills__header{
     font-size: 36px;
 }
@@ -866,261 +903,296 @@ hr{
     padding-right: 4px;
     padding-left: 4px
 }
+
 .projectPopup__btnExit{
     left: 91%;
     top: 1%;
 }
+
 .hireMe > .container > h1{
     font-size: 18.324px;
 }
+
 .hireMe > div > button > span{
     width:180px;
 
 }
+
 .hireMe > div > button > span{
     font-size: 10px;
     line-height: 0.875;
 }
 
 }
+
+
 /* SMALL */
 @media (min-width: 359px) and (max-width: 479px) {
 
-    .container{
-        width: 350px;
-    }
-    .aboutMe > .container > p{
-        line-height:1.7;
-    }
-    .hirePopup{
-        left:10%;
-        min-width: 80%;
-    }
+.container{
+    width: 350px;
+}
 
-    .menuPopup{
-        margin-left: -175px;
-    }
+.aboutMe > .container > p{
+    line-height:1.7;
+}
 
-    .menuPopup__btnExit{
-        left:43%;
-    }
-    .skills__header{
-        font-size: 36px;
-    }
-    .skillContener__box{
-        margin-right: 40px;
-        margin-left: 40px;
-    }
+.hirePopup{
+    min-width: 80%;
+    left:10%;
+}
 
-    .skillContener__box--header{
-        font-size: 18px;
+.menuPopup{
+    margin-left: -175px;
+}
 
-    }
+.menuPopup__btnExit{
+    left:43%;
 
-    .skillContener__box--paragraph{
-        font-size:14px;
-        line-height: 1.2188;
-        width: 180%;
-    }
+}
 
-    .projects__header{
-        font-size:36px;
-    }
+.skills__header{
+    font-size: 36px;
+}
 
-    .projectsContainer__box{
-        margin-right: 10px;
-        margin-top: 10px;
-        height: 100px;
+.skillContener__box{
+    margin-right: 40px;
+    margin-left: 40px;
+}
 
-        width: calc(100% / 3);
-    }
 
-    .projectPopup{
-        margin-left: -175px;
-    }
+.skillContener__box--header{
+    font-size: 18px;
+}
 
-    .projectPopup__header--icon{
-        margin-left: 0px;
-        margin-top:-10px;
-        margin-right: 3px;
-        width: 20px;
-        height: 20px;
-    }
 
-    .projectPopup__header--title{
-        font-size: 15px;
-        margin-left: 0;
-        margin-right:0;
-        line-height: 0.902;
+.skillContener__box--paragraph{
+    font-size:14px;
+    line-height: 1.2188;
+    width: 180%;
+}
 
-    }
+.projects__header{
+    font-size:36px;
+}
 
-    .projectPopup__header--tags{
-        font-size: 8px;
-        border-radius: 15px;
-        margin-left: 3px;
-        margin-top: -9px;
-        padding-right: 4px;
-        padding-left: 4px
-    }
-    .projectPopup__btnExit{
-        left: 91%;
-        top: 1%;
-    }
-    .hireMe > .container > h1{
-        font-size: 18.324px;
-    }
-    .hireMe > div > button > span{
-        width:180px;
+.projectsContainer__box{
+    margin-right: 10px;
+    margin-top: 10px;
+    height: 100px; 
+    width: calc(100% / 3);
+}
 
-    }
-    .hireMe > div > button > span{
-        font-size: 10px;
-        line-height: 0.875;
-    }
+.projectPopup{
+    margin-left: -175px;
+}
+
+.projectPopup__header--icon{
+    margin-left: 0px;
+    margin-top:-10px;
+    margin-right: 3px;
+    width: 20px;
+    height: 20px;
+}
+
+.projectPopup__header--title{
+    font-size: 15px;
+    margin-left: 0;
+    margin-right:0;
+    line-height: 0.902;
+}
+
+.projectPopup__header--tags{
+    font-size: 8px;
+    border-radius: 15px;
+    margin-left: 3px;
+    margin-top: -9px;
+    padding-right: 4px;
+    padding-left: 4px
+}
+    
+.projectPopup__btnExit{
+    left: 91%;
+    top: 1%;
+}
+
+.hireMe > .container > h1{
+    font-size: 18.324px;
+}
+
+.hireMe > div > button > span{
+    width:180px;
+}
+
+.hireMe > div > button > span{
+    font-size: 10px;
+    line-height: 0.875;
+}
   
 }
-/* Small devices (landscape phones, 576px and up) */
+
+/* Landscapes */
+
 @media (min-width: 480px) and (max-width: 767px){
-    .container{
-        width: 550px;
-    }
-    .menuPopup{
-        margin-left: -275px;
-    }
-    .welcome__circle{
-        margin-top: 40px;
-    }
-    .welcome--header{
-        font-size: 28px;
-    }
-    .welcome--header3{
-        font-size:12px;
-        margin-top: -10px;
-    }
-    .welcome--arrow{
-        margin-top: 5px;
-    }
-    .skillContener__box--header{
-        font-size:18px;
-    }
-    .skillContener__box--paragraph{
-        font-size: 12px;
-    }
-    .aboutMe > .container > p{
-        line-height: 1.5;
-    }
-    .projectPopup{
-        margin-left:-275px;
-    }
-    .projectsContainer__box{
-        height: 100px;
-        margin-right: 0px; 
-        margin-top: 0px; 
-    }
-    .projectPopup__header--tags{
-        font-size:10px;
-        margin-left: 2px;
 
-    }
-    .projectPopup__header--icon{
-        width: 20px;
-        height: 20px;
-    }
-    .projectPopup__header--title{
-        font-size:20px;
-    }
-    body > div.container.projectPopup > div.projectPopup__header > button{
-        margin-top:-17px;
-    }
-    .hireMe > .container > h1{
-        font-size: 21.324px;
-    }
-    .hirePopup{
-        top: 2%;
-    }
-    .hirePopup__btnExit{
-        left: 44%;
-        margin-top:0px;
-    }
-    
-    .hirePopup > h1{
-        font-size: 30px;
-        margin-top: -10px;
-    }
-    .hirePopup__form__input--message{
-        height: 90px;
-    }
-    .hirePopup__form__input--submit{
-        margin-bottom:5px;
-        margin-top:0px;
-    }
-    .menuPopup--link{
-        font-size: 26px;
-    }
-    hr{
-        margin-top: 5px;
-
-    }
-    .menuPopup__social{
-        padding:0px;
-        margin-bottom: 20px;
-
-    }
-    ul,li{
-        margin-top: -12px;
-
-    }
+.container{
+    width: 550px;
 }
 
-/* Medium devices (tablets, 768px and up) */
+.menuPopup{
+    margin-left: -275px;
+}
+
+.welcome__circle{
+    margin-top: 40px;
+}
+
+.welcome--header{
+    font-size: 28px;
+}
+
+.welcome--header3{
+    font-size:12px;
+    margin-top: -10px;
+}
+
+.welcome--arrow{
+    margin-top: 5px;
+}
+
+.skillContener__box--header{
+    font-size:18px;
+}
+
+.skillContener__box--paragraph{
+    font-size: 12px;
+}
+
+.aboutMe > .container > p{
+    line-height: 1.5;
+}
+
+.projectPopup{
+    margin-left:-275px;
+}
+
+.projectsContainer__box{
+    height: 100px;
+    margin-right: 0px; 
+    margin-top: 0px; 
+}
+
+.projectPopup__header--tags{
+    font-size:10px;
+    margin-left: 2px;
+}
+
+.projectPopup__header--icon{
+    width: 20px;
+    height: 20px;
+}
+
+.projectPopup__header--title{
+    font-size:20px;
+}
+
+body > div.container.projectPopup > div.projectPopup__header > button{
+    margin-top:-17px;
+}
+
+.hireMe > .container > h1{
+    font-size: 21.324px;
+}
+
+.hirePopup{
+    top: 2%;
+}
+
+.hirePopup__btnExit{
+    margin-top:0px;
+    left: 44%; 
+}
+
+.hirePopup > h1{
+    font-size: 30px;
+    margin-top: -10px;
+}
+
+.hirePopup__form__input--message{
+    height: 90px;
+}
+
+.hirePopup__form__input--submit{
+    margin-bottom:5px;
+    margin-top:0px;
+}
+
+.menuPopup--link{
+    font-size: 26px;
+}
+
+hr{
+    margin-top: 5px;
+}
+
+.menuPopup__social{
+    padding:0px;
+    margin-bottom: 20px;
+}
+
+ul,li{
+    margin-top: -12px;
+}
+
+}
+
+/* Tablety */
+
 @media (min-width: 768px) and (max-width: 1199px) {
-    .container{
-        width:750px;
-    }
-    .skillContener__box{
-        margin-right: 80px;
-        margin-left: 80px;
-    }
-    .skillContener__box--header {
-        font-size: 15px;
-    }
-    .projectsContainer__box {
-        height: 120px;
-        margin-right: 10px;
-        margin-top: 10px;
+.container{
+    width:750px;
+}
+
+.skillContener__box{
+    margin-right: 80px;
+    margin-left: 80px;
+}
+
+.skillContener__box--header {
+    font-size: 15px;
+}
+
+.projectsContainer__box {
+    margin-right: 10px;
+    margin-top: 10px;
+    height: 120px;
  }
+
  .menuPopup{
     margin-left: -375px;
  }
+ 
  .projectPopup{
     margin-left: -375px;
-
- }
+}
+ 
  body > div.container.projectPopup > div.projectPopup__header > button{
     margin-top:0px;
  }
+
  .projectPopup__btnExit{
-     margin-top:0px;
-     left: 95%;
-     top: 1%;
- 
+    margin-top:0px;
+    left: 95%;
+    top: 1%;
  }
- .projectPopup__header--title {
+
+.projectPopup__header--title {
     font-size: 26px;
  }
- .projectPopup__header--icon {
-    width: 30px;
-    height: 30px;
+
+.projectPopup__header--icon {
     margin-right:5px;
- }
+    width: 30px;
+    height: 30px; 
 }
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-
- }
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
-
 }
