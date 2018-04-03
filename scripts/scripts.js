@@ -39,13 +39,16 @@ showMenu();
 document.addEventListener("scroll",function(){
 let wScroll = window.scrollY;
 if(wScroll+50 <= document.querySelector(".aboutMe").offsetTop){
-    document.querySelector(".menubtn").classList.remove("backgroundBlue");
-    document.querySelector(".menubtn").classList.add("backgroundWhite");
+    for(let i =0;i< document.querySelectorAll(".menubtn--line").length;i++){
+        document.querySelectorAll(".menubtn--line")[i].style.backgroundColor = "white";
+    }
+    
     document.querySelector(".backToTop").classList.add("displayNone");
 }else{
     document.querySelector(".menubtn").classList.remove("backgroundWhite");
-    document.querySelector(".menubtn").classList.add("backgroundBlue");
-    document.querySelector(".backToTop").classList.remove("displayNone");
+    for(let i =0;i< document.querySelectorAll(".menubtn--line").length;i++){
+        document.querySelectorAll(".menubtn--line")[i].style.backgroundColor = "rgb(53,100,252)";
+    }
 }
 
 })
