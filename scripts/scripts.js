@@ -7,11 +7,9 @@ document.querySelector(".welcome--arrow").addEventListener("click",function(){
     location.href = "#o-mnie";
 })
 function showMenu(){
-    
     const menuPopup = document.querySelector(".menuPopup");
     menuPopup.classList.remove("displayNone");
     document.querySelector(".darkLayer").classList.remove("displayNone");
-    
     document.querySelector(".menuPopup__btnExit").addEventListener("click",closeMenu);
     const linki = [];
     for(let i =0;i< document.querySelectorAll(".menuPopup--link").length;i++){
@@ -25,7 +23,7 @@ function closeMenu(){
     document.querySelector(".darkLayer").classList.add("displayNone");
 }
 
-const button = document.querySelector(".welcome__menubtn");
+const button = document.querySelector(".menubtn");
 const line = [];
 for(let i= 0; i<document.querySelectorAll(".line").length;i++){
 line[i] = document.querySelectorAll(".line")[i];
@@ -37,19 +35,19 @@ for(let i =0;i<e.target.children.length;i++){
 }
 showMenu();
 })
+
 document.addEventListener("scroll",function(){
 let wScroll = window.scrollY;
 if(wScroll+50 <= document.querySelector(".aboutMe").offsetTop){
-    for(let i = 0;i<line.length;i++){
-        line[i].classList.remove("backgroundBlue");
-        line[i].classList.add("backgroundWhite");
-    }
+    document.querySelector(".menubtn").classList.remove("backgroundBlue");
+    document.querySelector(".menubtn").classList.add("backgroundWhite");
+    document.querySelector(".backToTop").classList.add("displayNone");
 }else{
-for(let i = 0;i<line.length;i++){
-    line[i].classList.remove("backgroundWhite");
-        line[i].classList.add("backgroundBlue");
-    }
+    document.querySelector(".menubtn").classList.remove("backgroundWhite");
+    document.querySelector(".menubtn").classList.add("backgroundBlue");
+    document.querySelector(".backToTop").classList.remove("displayNone");
 }
+
 })
 
 const hireBtns = [];
@@ -60,11 +58,12 @@ function showHire(){
 document.querySelector(".hirePopup").classList.remove("displayNone");
 document.querySelector(".hirePopup__btnExit").addEventListener("click",closeHire);
 document.querySelector(".darkLayer").classList.remove("displayNone");
-
+document.querySelector(".menubtn").classList.add("displayNone");
 }
 function closeHire(){
 document.querySelector(".hirePopup").classList.add("displayNone");
 document.querySelector(".darkLayer").classList.add("displayNone");
+document.querySelector(".menubtn").classList.remove("displayNone");
 }
 
 const projects = [];
@@ -105,18 +104,18 @@ const kalendarz = {
     title: "Aplikacja kalendarz",
     tags: ["JS","ES6","jQuery"],
     };
-const textEditor = {
-    githubURL: "https://github.com/bastianmalisz/text-editor",
-    liveURL:"https://bastianmalisz.github.io/text-editor/editor.html",
-    imageURL:"./images/editorimg.png",
-    iconURL: "./images/text-file-editor.png",
-    title: "Aplikacja edytor",
-    tags: ["JS","ES6"],
+const darts = {
+    githubURL: "https://github.com/bastianmalisz/Darts",
+    liveURL:"http://sebixowetesty.co.nf/",
+    imageURL:"./images/dartsSS.PNG",
+    iconURL: "./images/darts.png",
+    title: "Darts counter",
+    tags: ["JS","ES6","SQL","PHP","AJAX"],
     };
 const musicPlayer = {
     githubURL:"https://github.com/bastianmalisz/mp3",
     liveURL:"https://bastianmalisz.github.io/mp3/mp3.html",
-    imageURL:"./images/muzykaimg.PNG",
+    imageURL:"./images/muzykaimg.png",
     iconURL: "./images/music-player.png",
     title: "Aplikacja music player",
     tags: ["JS","Web Audio API", "canvas"],
@@ -174,15 +173,15 @@ switch(e.target.dataset.project) {
         projGithub.href=kalendarz.githubURL;
         break;
 
-    case "textEditor":
-        projIcon.style.backgroundImage = "url("+textEditor.iconURL+")"; 
-        projTitle.innerHTML = textEditor.title;
+    case "darts":
+        projIcon.style.backgroundImage = "url("+darts.iconURL+")"; 
+        projTitle.innerHTML = darts.title;
         for(i = 0;i<projTags.length;i++){
-            projTags[i].innerHTML=textEditor.tags[i];
+            projTags[i].innerHTML=darts.tags[i];
             }
-        projImg.src = textEditor.imageURL;
-        projLive.href=textEditor.liveURL;
-        projGithub.href=textEditor.githubURL;
+        projImg.src = darts.imageURL;
+        projLive.href=darts.liveURL;
+        projGithub.href=darts.githubURL;
         break;
 
     case "musicPlayer":
@@ -226,4 +225,10 @@ function closeProjectBox() {
 document.querySelector(".projectPopup").classList.add("displayNone");
 document.querySelector(".darkLayer").classList.add("displayNone");
 $("div").remove(".projectPopup__header--tags");
-}           
+}          
+document.querySelector(".backToTop").addEventListener("click",backToTop);
+function backToTop(){
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+

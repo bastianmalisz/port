@@ -42,7 +42,6 @@ html,body{
 
 /* Navigation */
 .navi{
-    height:12vh;
     width:100%;
     position:fixed;
     z-index: 1;
@@ -112,7 +111,7 @@ html,body{
 }
 
 .welcome--header3{
-    font-size: 16px;
+    font-size: 22px;
     font-weight:300;
     color: rgba(255, 255, 255, 0.7);
     text-transform: uppercase;
@@ -148,12 +147,37 @@ html,body{
     background-size:contain;
     background-position:center;
     background-repeat: no-repeat;
-    width: 15px;
-    height: 30px; 
+    width: 10px;
+    height: 20px; 
     margin-top:50px;
     margin-bottom:50px;
+    padding: 10px;
     cursor: pointer;
 }
+
+/* Back to top button */
+
+.backToTop{
+    color: rgba(16, 52, 170, 0.747);
+    font-size:4rem;
+    border: none;
+    background-color:transparent;
+    position: fixed;
+    right: 5%;
+    bottom:10%;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    outline: none;
+    opacity: 1;
+}
+.backToTop > span{
+    font-size: 0.75rem;
+    margin-top: -10px;
+    display:block;
+    
+}
+/* About me section */
 
 .aboutMe{
     width:100%;
@@ -161,15 +185,14 @@ html,body{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-bottom:30px;
-}
-
-.aboutMe > .container{
-    position:relative;
+    margin-top: 60px;
+    margin-bottom:95px;
     
 }
+  
 
-.aboutMe > .container > h1{
+
+.aboutMe > h1{
     font-size: 42px;
     font-weight: 300;
     color: rgb(54, 119, 253);
@@ -177,9 +200,10 @@ html,body{
     text-align: center;
 }
 
-.aboutMe > .container > p{
+.aboutMe > p{
     font-size: 15px;
     color: rgb(90, 90, 90);
+    max-width: 75vw;
     line-height: 1.988;
     text-align: center;
   
@@ -339,8 +363,8 @@ box-shadow: 0px 0px 5px rgb(54, 148, 255);
     background-position:center;
     background-color: rgb(244, 244, 244);
 }
-.projects—textEditor{
-    background: url("../images/text-file-editor.png");
+.projects—darts{
+    background: url("../images/darts.png");
     background-repeat:no-repeat;
     background-size:40%;
     background-position:center;
@@ -380,6 +404,8 @@ box-shadow: 0px 0px 5px rgb(54, 148, 255);
 }
 
 .hireMe__container{
+    padding-top:20px;
+    padding-bottom:20px;
     display:flex;
     flex-direction: row;
     justify-content: center;
@@ -407,34 +433,44 @@ box-shadow: 0px 0px 5px rgb(54, 148, 255);
 }
 
 /* Button menu*/
-.welcome__menubtn{
+.menubtn{
     border: none;
-    background-color:transparent;
+    background-color:white;
     position:relative;
     display:flex;
-    justify-content:space-around;
+    justify-content:space-between;
     flex-direction: column;
     top:9vh;
     left: 90%;
-    width: 40px;
-    height:30px;
+    width: 25px;
+    height:3px;
     cursor: pointer;
-    z-index:5;   
+    z-index:5;  
+     
+}
+.menubtn:after{
+    content:"";
+    background-color: inherit;
+    position: absolute;
+    top: 6px;
+    left:0px;
+    width: 100%;
+    height: 3px;
+}
+.menubtn:before{
+    content:"";
+    background-color: inherit;
+    position: absolute;
+    top: 12px;
+    left:0px;
+    width: 100%;
+    height: 3px;
 }
 
-.welcome__menubtn:focus{
+.menubtn:focus{
     outline:0;
 }
 
-.line{
-    margin:0px;
-    position:relative;
-    width: 25px;
-    height:2px;
-    background-color: rgba(255, 255, 255, 0.808);
-    transform-origin: 0%;
-    z-index:-1;
-}
 
 /* menuPopup */
 ul,li{
@@ -492,7 +528,7 @@ ul,li{
     color: rgb(210, 210, 210);
     line-height: 1.96;
     text-decoration: none;
-    transition: 0.35s cubic-bezier(0.455, 0.03, 0.515, 0.955) all
+    transition: 0.35s cubic-bezier(0.455, 0.03, 0.515, 0.955) color;
 }
 
 .menuPopup--link:hover{
@@ -615,7 +651,7 @@ hr{
 .hirePopup__form__input{
     color: rgba(90, 90, 90, 0.502);
     line-height: 2.188;
-    padding:2px;
+    padding: 10px;
     margin-bottom:15px;
     text-align: left;  
     border-style: solid;
@@ -702,19 +738,17 @@ hr{
 
 .projectPopup__header--tags{
     font-size: 13px;
-    color: rgb(90, 90, 90);
+    color: rgb(0, 0, 0);
     line-height: 1.9888;
     text-align: center;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(90, 90, 90);
+    border:none;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0);  
+    background-color: rgba(54, 120, 253, 0.404);  
     margin-left:15px;
     padding-right:8px;
     padding-left:8px;
     height:50%;
-    opacity:0.3;
+    opacity:0.9;
 }
 
 .projectPopup__btnExit{
@@ -807,7 +841,13 @@ hr{
     top: 2%;
 
 }
-
+.backToTop{
+    font-size: 3rem;
+    right: -2%;
+}
+.backToTop > span {
+    font-size: 0.65rem;
+}
 .menuPopup{
     margin-left: -150px;
 }
@@ -927,7 +967,7 @@ hr{
 
 
 /* SMALL */
-@media (min-width: 359px) and (max-width: 479px) {
+@media (min-width: 359px) and (max-width: 550px) {
 
 .container{
     width: 350px;
@@ -950,7 +990,13 @@ hr{
     left:43%;
 
 }
-
+.backToTop{
+    font-size: 3rem;
+    right: -2%;
+}
+.backToTop > span {
+    font-size: 0.65rem;
+}
 .skills__header{
     font-size: 36px;
 }
@@ -1033,7 +1079,7 @@ hr{
 
 /* Landscapes */
 
-@media (min-width: 480px) and (max-width: 767px){
+@media (min-width: 550px) and (max-width: 767px){
 
 .container{
     width: 550px;
