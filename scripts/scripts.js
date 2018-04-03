@@ -97,8 +97,8 @@ const pogoda = {
     tags: ["JS","ES6","speechApi","ajax","jQuery"],
     };
 const kalendarz = {
-    githubURL: "https://github.com/bastianmalisz/kal2",
-    liveURL: "https://bastianmalisz.github.io/kal2/kalendarz.html",
+    githubURL: "https://github.com/bastianmalisz/Kalendarz",
+    liveURL: "https://bastianmalisz.github.io/Kalendarz/kalendarz.html",
     imageURL:"./images/calendarimg.PNG",
     iconURL: "./images/calendar.png", 
     title: "Aplikacja kalendarz",
