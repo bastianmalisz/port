@@ -348,7 +348,14 @@ html,body{
 .projects__box:hover{
 box-shadow: 0px 0px 5px rgb(54, 148, 255);
 }
-
+.projects__box--description{
+    color:rgba(48, 46, 46, 0.7);
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom:15px;
+    width:80%;
+    
+}
 .projects—weatherApp{
     background: url("../images/cloud.png");
     background-repeat:no-repeat;
@@ -909,7 +916,9 @@ hr{
     height: 100px;
     width: calc(100% / 3);
 }
-
+.projects__box--description{
+    font-size:11px;
+}
 .projectPopup__header--icon{
     margin-left: 0px;
     margin-top:-10px;
@@ -1019,7 +1028,9 @@ hr{
     height: 100px; 
     width: calc(100% / 3);
 }
-
+.projects__box--description{
+    font-size:14px;
+}
 .projectPopup{
     margin-left: -175px;
 }
@@ -1118,7 +1129,9 @@ hr{
     margin-right: 0px; 
     margin-top: 0px; 
 }
-
+.projects__box--description{
+    font-size:14px;
+}
 .projectPopup__header--tags{
     font-size:10px;
     margin-left: 2px;
@@ -1204,7 +1217,9 @@ ul,li{
     margin-top: 10px;
     height: 120px;
  }
-
+ .projects__box--description{
+    font-size:15px;
+}
  .menuPopup{
     margin-left: -375px;
  }

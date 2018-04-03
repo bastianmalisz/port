@@ -98,6 +98,7 @@ const pogoda = {
     iconURL: "./images/cloud.png", 
     title: "Aplikacja pogoda",
     tags: ["JS","ES6","speechApi","ajax","jQuery"],
+    desc:["Aplikacja pogodowa. Zbudowana na speech api oraz opeanweather api. Aplikacja przechwytuje komendę wymawianą przez użytkownika i wykonuję akcję pobrania daych o pogdzie w lokalizacji użytkownika a następnie prezentuje ją za pomocą syntezatora mowy."]
     };
 const kalendarz = {
     githubURL: "https://github.com/bastianmalisz/Kalendarz",
@@ -106,6 +107,7 @@ const kalendarz = {
     iconURL: "./images/calendar.png", 
     title: "Aplikacja kalendarz",
     tags: ["JS","ES6","jQuery"],
+    desc: ["Aplikacja kalendarz. Wyświetla kalendarz i pozwala zapisać wydarzenie w wybranym terminie. Wydarzenie jest zapisywane w local storage."]
     };
 const darts = {
     githubURL: "https://github.com/bastianmalisz/Darts",
@@ -114,6 +116,7 @@ const darts = {
     iconURL: "./images/darts.png",
     title: "Darts counter",
     tags: ["JS","ES6","SQL","PHP","AJAX"],
+    desc: ["Aplikacja pozwala na zarządzanie grą Darts, od dodania odpowiedniej ilości graczy poprzez sumowanie ich punktów. Wyświetla na bieżąco również inne informacje, takie jak czas gry, najlepszy rzut rozgrywki. Aplikacja zapisuje dane w bazie danych, a następnie przetwarza je by przekazać wybrane informacje (np. najlepszy kiedykolwiek rzut) "]
     };
 const musicPlayer = {
     githubURL:"https://github.com/bastianmalisz/mp3",
@@ -122,6 +125,7 @@ const musicPlayer = {
     iconURL: "./images/music-player.png",
     title: "Aplikacja music player",
     tags: ["JS","Web Audio API", "canvas"],
+    desc:["Aplikacja odtwarzająca wybrane piosenki. Główym aspektem aplikacji jest wyświetlana animacja bazująca na częstotliwości utworu. Zbdudowana na podstawie web audio api oraz elemencie canvas."]
     };
 const webFryzjer = {
     liveURL:"http://kasia-salon.prv.pl",
@@ -145,6 +149,7 @@ const projTitle = document.querySelector(".projectPopup__header--title");
 const projTag = document.querySelectorAll(".projectPopup__header--tags");
 const projLive = document.querySelector(".live-link");
 const projGithub = document.querySelector(".gh-link");
+const projDesc = document.querySelector(".projects__box--description");
 const projTags = [];
 for(let i =0;i< projTag.length;i++){
     projTags[i] = projTag[i];
@@ -163,6 +168,7 @@ switch(e.target.dataset.project) {
         projImg.src = pogoda.imageURL;
         projLive.href=pogoda.liveURL;
         projGithub.href=pogoda.githubURL;
+        projDesc.innerHTML = pogoda.desc;
         break;
 
     case "calendarApp":
@@ -174,6 +180,7 @@ switch(e.target.dataset.project) {
         projImg.src = kalendarz.imageURL;
         projLive.href=kalendarz.liveURL;
         projGithub.href=kalendarz.githubURL;
+        projDesc.innerHTML = kalendarz.desc;
         break;
 
     case "darts":
@@ -185,6 +192,7 @@ switch(e.target.dataset.project) {
         projImg.src = darts.imageURL;
         projLive.href=darts.liveURL;
         projGithub.href=darts.githubURL;
+        projDesc.innerHTML = darts.desc;
         break;
 
     case "musicPlayer":
@@ -196,6 +204,7 @@ switch(e.target.dataset.project) {
         projImg.src = musicPlayer.imageURL;
         projLive.href=musicPlayer.liveURL;
         projGithub.href=musicPlayer.githubURL;
+        projDesc.innerHTML = musicPlayer.desc;
         break;
 
     case "fryzjerWeb":
@@ -207,6 +216,7 @@ switch(e.target.dataset.project) {
         projImg.src = webFryzjer.imageURL;
         projLive.href=webFryzjer.liveURL;
         projGithub.href=webFryzjer.githubURL;
+        projDesc.innerHTML ="";
         break;
 
     case "fundacjaWeb":
@@ -218,6 +228,7 @@ switch(e.target.dataset.project) {
         projImg.src = webFundacja.imageURL;
         projLive.href=webFundacja.liveURL;
         projGithub.href=webFundacja.githubURL;
+        projDesc.innerHTML ="";
         break;
     default:
         return;
